@@ -183,7 +183,7 @@ public class ListenerController extends UserAccountController {
         throw new NotEnoughCreditException();
     }
 
-    public String createPlaylist(String name) {
+    public String createPlaylist(String name) throws Exception{
         if (this.listener instanceof PremiumListener) {
             Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
             this.listener.getListenerPlaylists().add(newPlaylist);
@@ -195,13 +195,13 @@ public class ListenerController extends UserAccountController {
                 this.playlistCounter++;
                 return "playlist created successfully.";
             }
-            return "you've reached the limit for creating playlist. if you want to create more, get premium subscription.";
+            throw new FreeAccountLimitException("you've reached the limit for creating playlist. if you want to create more, get premium subscription.");
         }
     }
 
     ;
 
-    public String addAudioToPlaylist(String playlistName, String audioID) {
+    public String addAudioToPlaylist(String playlistName, String audioID) throws Exception{
         if (this.listener instanceof PremiumListener) {
             Audio foundAudio = null;
             for (Audio allAudios : Database.getDatabase().getAllAudios()) {
@@ -245,7 +245,7 @@ public class ListenerController extends UserAccountController {
                     } else return "playlist not found.";
                 }
             }
-            return "you've reached the limit for adding songs to this playlist. if you want to add more, get premium subscription.";
+            throw new FreeAccountLimitException("you've reached the limit for adding songs to this playlist. if you want to add more, get premium subscription.");
         }
         return "";
     }
