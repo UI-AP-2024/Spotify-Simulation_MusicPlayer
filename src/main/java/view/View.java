@@ -57,6 +57,7 @@ public class View {
             else if(UserAccountController.getUserAccountController().login(answers[1],answers[2]).equals("PodCaster logged in.")){
                 PodCaster();
             }
+            showMenu();
         } else { System.out.println("invalid command. try again. ");
             showMenu(); }
     }

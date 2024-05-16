@@ -18,13 +18,13 @@ abstract public class UserAccount {
         Matcher phoneMatcher = phonePattern.matcher(phoneNumber);
         if (phoneMatcher.matches()) {
             this.phoneNumber = phoneNumber;
-        } else throw new Exception("Phone Number Pattern Doesn't Match. Please Try Again.");
+        } else throw new InvalidFormatException("Phone Number Pattern Doesn't Match. Please Try Again.");
         String emailRegex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
         Pattern emailPattern = Pattern.compile(emailRegex);
         Matcher emailMatcher = emailPattern.matcher(email);
         if (emailMatcher.matches()) {
             this.Email = email;
-        } else throw new Exception("Email Pattern Doesn't Match. Please Try Again.");
+        } else throw new InvalidFormatException("Email Pattern Doesn't Match. Please Try Again.");
         this.userName = userName;
         this.accountPassword = accountPassword;
         this.fullName = fullName;

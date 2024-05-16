@@ -180,11 +180,15 @@ public class ListenerController extends UserAccountController {
                 return "your Free account is now premium!";
             }
         }
-        return "your credit is not enough. please increase your account's credit.";
+        throw new NotEnoughCreditException();
     }
 
     public String createPlaylist(String name) {
-        if (this.listener instanceof Listener) {
+        if (this.listener instanceof PremiumListener) {
+            Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
+            this.listener.getListenerPlaylists().add(newPlaylist);
+            return "playlist created successfully.";
+        } else {
             if (this.playlistCounter <= 3) {
                 Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
                 this.listener.getListenerPlaylists().add(newPlaylist);
@@ -192,12 +196,7 @@ public class ListenerController extends UserAccountController {
                 return "playlist created successfully.";
             }
             return "you've reached the limit for creating playlist. if you want to create more, get premium subscription.";
-        } else if (this.listener instanceof PremiumListener) {
-            Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
-            this.listener.getListenerPlaylists().add(newPlaylist);
-            return "playlist created successfully.";
         }
-        return "";
     }
 
     ;

@@ -85,7 +85,7 @@ public class UserAccountController {
         return list;
     }
 
-    public String login(String username, String password){
+    public String login(String username, String password) throws Exception {
         for (UserAccount users : Database.getDatabase().getAllUsers()){
             if (users != null) {
                if (users.getUserName().equals(username)){
@@ -104,11 +104,11 @@ public class UserAccountController {
                            PodCasterController.getPodCasterController().setPodCaster((PodCaster) users);
                            return "PodCaster logged in.";
                        }
-                   } else return "password is incorrect";
+                   } else throw new WrongPasswordException();
                }
             }
         }
-        return "invalid username. try logging in again or signing up.";
+        throw new UserNotFoundException();
     }
 
     public String logout() {
