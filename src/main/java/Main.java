@@ -17,7 +17,7 @@ public class Main extends Application {
 //        View.getView().showMenu();
         launch();
     }
-
+//
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
