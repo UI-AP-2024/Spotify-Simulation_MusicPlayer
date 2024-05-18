@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.SignUpPageController">
+   <children>
+      <ImageView fitHeight="455.0" fitWidth="700.0" opacity="0.35">
+         <image>
+            <Image url="@Images/signBG.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="394.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up." wrappingWidth="176.53680419921875">
+         <font>
+            <Font name="SansSerif Bold" size="41.0" />
+         </font>
+      </Text>
+      <Button fx:id="signupBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-color: #121212;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold Italic" size="23.0" />
+         </font>
+      </Button>
+      <TextField fx:id="usernameTextField" layoutX="394.0" layoutY="114.0" prefHeight="38.0" prefWidth="248.0" promptText="Username" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="PassTextField" layoutX="394.0" layoutY="159.0" prefHeight="38.0" prefWidth="248.0" promptText="Password" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nameTextField" layoutX="394.0" layoutY="204.0" prefHeight="38.0" prefWidth="248.0" promptText="Name" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailTextField" layoutX="394.0" layoutY="249.0" prefHeight="38.0" prefWidth="248.0" promptText="E-mail" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberTextField" layoutX="394.0" layoutY="294.0" prefHeight="38.0" prefWidth="248.0" promptText="Phone Number" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="birthTextField" layoutX="394.0" layoutY="339.0" prefHeight="38.0" prefWidth="248.0" promptText="BirthDate (YYYY-MM-DD)" style="-fx-background-color: #414141;">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="signUpBtn" layoutX="551.0" layoutY="389.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Sign Up">
+         <font>
+            <Font name="SansSerif Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

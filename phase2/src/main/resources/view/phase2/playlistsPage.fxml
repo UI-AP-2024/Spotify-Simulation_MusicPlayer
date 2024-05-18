@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.playlistsPageController">
+   <children>
+      <AnchorPane fx:id="sideBar" layoutX="-2.0" prefHeight="460.0" prefWidth="162.0" style="-fx-background-color: #121212;">
+         <children>
+            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/homebtn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Searchsidebar" fitHeight="30.0" fitWidth="110.0" layoutX="11.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/searchbtn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LibSidebar" fitHeight="57.0" fitWidth="117.0" layoutX="11.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/lib.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="audiosSidebar" layoutX="16.0" layoutY="138.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #121212;" text="All Audios" textFill="#a5a9a5">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="ArtistsSidebar" layoutX="15.0" layoutY="173.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #121212;" text="All Artists" textFill="#a5a9a5">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="37.0" layoutY="329.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Log out">
+               <font>
+                  <Font name="SansSerif Bold" size="11.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="110.0" layoutX="-3.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/login%20header%20(2).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="160.0" stroke="BLACK" strokeType="INSIDE" width="548.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.6666666449922504">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.31578946113586426" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1894736886024475" green="0.06315789371728897" blue="0.06315789371728897" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fx:id="playlistName" fill="WHITE" layoutX="171.0" layoutY="113.0" opacity="0.39" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="295.5994873046875">
+         <font>
+            <Font name="SansSerif Bold" size="50.0" />
+         </font>
+      </Text>
+      <ListView fx:id="tracksList" layoutX="171.0" layoutY="246.0" prefHeight="200.0" prefWidth="537.0" style="-fx-background-color: #202020;" />
+      <Text fill="#fcfcfc" layoutX="171.0" layoutY="235.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Tracks">
+         <font>
+            <Font name="SansSerif Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="171.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #510000;" text="&lt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
