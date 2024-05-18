@@ -13,10 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicControllers.ListenerPageController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="152.0" layoutX="237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="495.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="152.0" layoutX="187.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="545.0">
          <fill>
             <LinearGradient endX="1.0" startX="0.21212120489640662" startY="1.0">
                <stops>
@@ -34,17 +33,17 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Text fill="WHITE" layoutX="250.0" layoutY="60.0" opacity="0.77" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+      <Text fill="WHITE" layoutX="193.0" layoutY="64.0" opacity="0.77" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
          <font>
             <Font name="SansSerif Bold" size="15.0" />
          </font>
       </Text>
-      <Button fx:id="backBtn" layoutX="242.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #91858a;" text="&lt;" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="backBtn" layoutX="193.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #91858a;" text="&lt;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Text fx:id="nameText" fill="WHITE" layoutX="250.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="274.1367416381836">
+      <Text fx:id="nameText" fill="WHITE" layoutX="193.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="274.1367416381836">
          <font>
             <Font name="SansSerif Bold" size="35.0" />
          </font>
