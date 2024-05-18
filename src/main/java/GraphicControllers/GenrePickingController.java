@@ -8,6 +8,9 @@ import javafx.scene.shape.Rectangle;
 public class GenrePickingController {
 
     @FXML
+    private Button applyBtn;
+
+    @FXML
     private Rectangle countryBtn;
 
     @FXML

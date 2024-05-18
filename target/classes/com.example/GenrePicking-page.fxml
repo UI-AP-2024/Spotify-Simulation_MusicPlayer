@@ -4,25 +4,240 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicControllers.GenrePickingController">
    <children>
-      <ImageView fitHeight="137.0" fitWidth="270.0" layoutX="416.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="77.0" fitWidth="220.0" layoutX="477.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Pictures/icon.png" />
          </image>
       </ImageView>
-      <Text fill="#29cc62" layoutX="22.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your favorite genres and help us know you better." textAlignment="CENTER" wrappingWidth="357.59991455078136">
+      <Text fill="#29cc62" layoutX="68.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your favorite genres and help us know you better." textAlignment="CENTER" wrappingWidth="402.3999023437501">
          <font>
-            <Font name="SansSerif Bold" size="28.0" />
+            <Font name="SansSerif Bold" size="25.0" />
          </font>
       </Text>
       <Button fx:id="genresBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-color: #121212;" text="&lt;" textFill="#29cc62">
          <font>
             <Font name="SansSerif Bold Italic" size="23.0" />
+         </font>
+      </Button>
+      <Rectangle fx:id="popBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8795321583747864" green="0.13333334028720856" blue="0.9473684430122375" opacity="0.8899999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9100000262260437" green="0.018200000748038292" blue="0.3814840018749237" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="rockBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15789473056793213" green="0.15730993449687958" blue="0.15730993449687958" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.2559843957424164" green="0.622895359992981" blue="0.7052631378173828" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="jazzBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.2995140850543976" blue="0.11999999731779099" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8631578683853149" green="0.733151376247406" blue="0.08311890810728073" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="hiphopBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="117.5" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.028654970228672028" green="0.2210526317358017" blue="0.047894738614559174" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.2141910344362259" green="0.8631578683853149" blue="0.3872488737106323" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="countryBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="272.5" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.019999999552965164" green="0.2504907548427582" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="trueCrimeBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.13684210181236267" blue="0.04333333298563957" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.75789475440979" blue="0.22736841440200806" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="#fffefe" layoutX="146.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POP" textAlignment="CENTER" wrappingWidth="63.7366943359375">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="296.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROCK" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="457.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JAZZ" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="130.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HIPHOP" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="264.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COUNTRY" textAlignment="CENTER" wrappingWidth="138.80841064453125">
+         <font>
+            <Font name="SansSerif Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="432.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRUE CRIME" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="18.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="societyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4099999964237213" green="0.01640000008046627" blue="0.19218793511390686" opacity="0.8899999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4921737611293793" green="0.027300000190734863" blue="0.9100000262260437" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="433.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SOCIETY" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="historyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="0.7613636652628581" endY="0.9621212121212122" startX="0.17045453868129037" startY="0.12121215011134293">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2947368323802948" green="0.18666666746139526" blue="0.09824561327695847" opacity="0.8899999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5894736647605896" green="0.4660117030143738" blue="0.33403509855270386" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="122.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORY" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="interviewBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.28787880232839874" startX="0.1212121139873158" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.014100000262260437" green="0.3546364903450012" blue="0.4699999988079071" opacity="0.8899999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" green="0.009005848318338394" blue="0.24946199357509613" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="277.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INTERVIEW">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="applyBtn" layoutX="571.0" layoutY="396.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #29cc62;" text="Apply">
+         <font>
+            <Font name="SansSerif Bold" size="18.0" />
          </font>
       </Button>
    </children>
