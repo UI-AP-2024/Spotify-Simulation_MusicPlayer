@@ -28,8 +28,8 @@ public class ListenerController extends UserAccountController {
         return listener;
     }
 
-    public static void setListener(Listener listener) {
-        listener = listener;
+    public void setListener(Listener listener) {
+        this.listener = listener;
     }
 
     public String showListenerFollowings() {
@@ -294,7 +294,7 @@ public class ListenerController extends UserAccountController {
         return list;
     }
 
-    public ArrayList sortBasedOnLikesListener() {
+    public ArrayList<Audio> sortBasedOnLikesListener() {
         return sortBasedOnLikes();
     }
 
@@ -392,7 +392,7 @@ public class ListenerController extends UserAccountController {
         return suggestions;
     }
 
-    public static String listenerSignUp(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
+    public String listenerSignUp(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
         for (UserAccount users : Database.getDatabase().getAllUsers()) {
             if (users != null) {
                 if (users.getUserName().equals(userName)) {

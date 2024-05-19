@@ -28,7 +28,7 @@
             <Font name="SansSerif Bold Italic" size="23.0" />
          </font>
       </Button>
-      <Rectangle fx:id="popBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="popBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="77.0" onMouseClicked="#popAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -46,7 +46,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="rockBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="rockBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="77.0" onMouseClicked="#rockAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -64,7 +64,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="jazzBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="jazzBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="77.0" onMouseClicked="#jazzAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -82,7 +82,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="hiphopBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="117.5" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="hiphopBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="117.5" layoutY="323.0" onMouseClicked="#hiphopAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -100,7 +100,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="countryBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="272.5" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="countryBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="272.5" layoutY="323.0" onMouseClicked="#countryAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -118,7 +118,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="trueCrimeBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="323.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="trueCrimeBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="323.0" onMouseClicked="#crimeAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -166,7 +166,7 @@
             <Font name="SansSerif Bold" size="18.0" />
          </font>
       </Text>
-      <Rectangle fx:id="societyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="societyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="428.0" layoutY="200.0" onMouseClicked="#societyAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -189,7 +189,7 @@
             <Font name="SansSerif Bold" size="25.0" />
          </font>
       </Text>
-      <Rectangle fx:id="historyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="historyBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="118.0" layoutY="200.0" onMouseClicked="#historyAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="0.7613636652628581" endY="0.9621212121212122" startX="0.17045453868129037" startY="0.12121215011134293">
                <stops>
@@ -212,7 +212,7 @@
             <Font name="SansSerif Bold" size="25.0" />
          </font>
       </Text>
-      <Rectangle fx:id="interviewBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+      <Rectangle fx:id="interviewBtn" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="273.0" layoutY="200.0" onMouseClicked="#interviewAct" stroke="BLACK" strokeType="INSIDE" width="120.0">
          <fill>
             <LinearGradient endX="1.0" endY="0.28787880232839874" startX="0.1212121139873158" startY="1.0">
                <stops>
@@ -235,7 +235,7 @@
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="applyBtn" layoutX="571.0" layoutY="396.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #29cc62;" text="Apply">
+      <Button fx:id="applyBtn" layoutX="571.0" layoutY="396.0" mnemonicParsing="false" onAction="#applyAct" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #29cc62;" text="Apply">
          <font>
             <Font name="SansSerif Bold" size="18.0" />
          </font>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="120.0" prefWidth="300.0" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.successController">
+   <children>
+      <Text fill="WHITE" layoutX="62.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Successful ! Enjoy uninterrupted music streaming." textAlignment="CENTER" wrappingWidth="176.2225799560547">
+         <font>
+            <Font name="SansSerif Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="32.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/login%20header%20(2).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

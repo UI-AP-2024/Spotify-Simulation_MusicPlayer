@@ -8,14 +8,14 @@ public class Listener extends UserAccount {
     private ArrayList<Playlist> listenerPlaylists;
     private Map<Audio, Long> numOfListenedAudios;
     private LocalDate subscriptionExpiryDate;
-    private ArrayList<Genre> favGenres;
+    private static ArrayList<Genre> favGenres;
     private ArrayList<Artist> followings;
     private Set<Genre> genresSuggestion;
     private Set<Audio> audiosSuggestion;
 
     public Listener(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
         super(userName, accountPassword, fullName, email, phoneNumber, birthDate);
-        this.favGenres = new ArrayList<>();
+        favGenres = new ArrayList<>();
         this.followings = new ArrayList<>();
         this.listenerPlaylists = new ArrayList<>();
         this.numOfListenedAudios = new HashMap<>();

@@ -53,7 +53,7 @@ public class SignUpPageController {
         try {
             String answer = birthTextField.getText();
             String[] answers = answer.split("-");
-            ListenerController.listenerSignUp(usernameTextField.getText(), PassTextField.getText(),
+            ListenerController.getListenerController().listenerSignUp(usernameTextField.getText(), PassTextField.getText(),
                     nameTextField.getText(), emailTextField.getText(), numberTextField.getText(), LocalDate.of(Integer.parseInt(answers[0]), Integer.parseInt(answers[1]), Integer.parseInt(answers[2])));
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("GenrePicking-page.fxml"));
             Scene scene;
