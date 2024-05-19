@@ -5,6 +5,8 @@ import model.Audio;
 import model.Database;
 import model.Report;
 
+import java.util.ArrayList;
+
 public class AdminController extends UserAccountController {
     private Admin admin;
     private static AdminController adminController;
@@ -27,7 +29,7 @@ public class AdminController extends UserAccountController {
         this.admin = admin;
     }
 
-    public String statistics() {
+    public ArrayList statistics() {
         return sortBasedOnLikes();
     }
 

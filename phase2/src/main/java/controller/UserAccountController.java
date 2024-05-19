@@ -71,18 +71,18 @@ public class UserAccountController {
         }
     }
 
-    public String sortBasedOnLikes() { //for both listener and admin
+    public static ArrayList<Audio> sortBasedOnLikes() { //for both listener and admin
         ArrayList<Audio> sortedAudiosBasedOnLikes = Database.getDatabase().getAllAudios();
         likesBubbleSort(sortedAudiosBasedOnLikes);
-        String list = "Audios Sorted from Most to Least Popularity Based On Likes: \n";
-        int index = 1;
-        for (Audio popularAudios : sortedAudiosBasedOnLikes) {
-            if (popularAudios != null) {
-                list += String.valueOf(index) + ". " + popularAudios.toString() + ", Likes: " + String.valueOf(popularAudios.getNumOfLikes()) + "\n";
-                index++;
-            }
-        }
-        return list;
+//        String list = "Audios Sorted from Most to the Least Popularity Based On Likes: \n";
+//        int index = 1;
+//        for (Audio popularAudios : sortedAudiosBasedOnLikes) {
+//            if (popularAudios != null) {
+//                list += String.valueOf(index) + ". " + popularAudios.toString() + ", Likes: " + String.valueOf(popularAudios.getNumOfLikes()) + "\n";
+//                index++;
+//            }
+//        }
+        return sortedAudiosBasedOnLikes;
     }
 
     public String login(String username, String password) throws Exception {

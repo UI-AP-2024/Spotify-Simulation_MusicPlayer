@@ -294,7 +294,7 @@ public class ListenerController extends UserAccountController {
         return list;
     }
 
-    public String sortBasedOnLikesListener() {
+    public ArrayList sortBasedOnLikesListener() {
         return sortBasedOnLikes();
     }
 
@@ -395,14 +395,14 @@ public class ListenerController extends UserAccountController {
         for (UserAccount users : Database.getDatabase().getAllUsers()) {
             if (users != null) {
                 if (users.getUserName().equals(userName)) {
-                    return "this username is already taken.";
+                    throw new Exception("this username is already taken.");
                 }
             }
         }
         Listener newListener = new Listener(userName, accountPassword, fullName, email, phoneNumber, birthDate);
         setListener(newListener);
         Database.getDatabase().getAllUsers().add(newListener);
-        return "sign up as a listener completed. please choose four of your favorite genres of music. ";
+        return "sign up as a listener completed. please choose four of your favorite genres of music.";
     }
 
     public String premiumRemainedDays() {

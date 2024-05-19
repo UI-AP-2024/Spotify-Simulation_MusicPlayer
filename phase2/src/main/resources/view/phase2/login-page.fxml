@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="246.0" fitWidth="351.0" layoutX="176.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Images/login%20header.png" />
+            <Image url="@Images/login%20header.png" />
          </image>
       </ImageView>
       <TextField fx:id="usernameTextField" layoutX="226.0" layoutY="197.0" prefHeight="38.0" prefWidth="248.0" promptText="Username" style="-fx-background-color: #414141;">
