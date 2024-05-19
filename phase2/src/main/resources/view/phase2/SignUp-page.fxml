@@ -55,7 +55,7 @@
             <Font name="SansSerif Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="signUpBtn" layoutX="551.0" layoutY="389.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Sign Up">
+      <Button fx:id="signUpBtn" layoutX="551.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#signUpAct" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Sign Up">
          <font>
             <Font name="SansSerif Bold" size="11.0" />
          </font>

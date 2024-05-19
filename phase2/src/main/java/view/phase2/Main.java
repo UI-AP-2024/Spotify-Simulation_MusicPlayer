@@ -95,6 +95,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         HomePageNotLoggedInController.ctrlStage = stage;
         LoginPageController.ctrlStage = stage;
+        SignUpPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         stage.setTitle("Spotify");

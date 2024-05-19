@@ -28,7 +28,7 @@ public class View {
         String[] answers = answer.split("-");
         if (answers[0].equals("Signup")) {
             if (answers[1].equals("L")) {
-                System.out.println(ListenerController.getListenerController().listenerSignUp(answers[2], answers[3], answers[4], answers[5], answers[6],
+                System.out.println(ListenerController.listenerSignUp(answers[2], answers[3], answers[4], answers[5], answers[6],
                         LocalDate.of(Integer.parseInt(answers[7]), Integer.parseInt(answers[8]), Integer.parseInt(answers[9]))));
                 String answer1 = sc.nextLine();
                 String[] answers1 = answer1.split(",");

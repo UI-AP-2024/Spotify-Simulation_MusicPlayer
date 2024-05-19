@@ -28,8 +28,8 @@ public class ListenerController extends UserAccountController {
         return listener;
     }
 
-    public void setListener(Listener listener) {
-        this.listener = listener;
+    public static void setListener(Listener listener) {
+        listener = listener;
     }
 
     public String showListenerFollowings() {
@@ -184,7 +184,7 @@ public class ListenerController extends UserAccountController {
         throw new NotEnoughCreditException();
     }
 
-    public String createPlaylist(String name) throws Exception{
+    public String createPlaylist(String name) throws Exception {
         if (this.listener instanceof PremiumListener) {
             Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
             this.listener.getListenerPlaylists().add(newPlaylist);
@@ -202,7 +202,7 @@ public class ListenerController extends UserAccountController {
 
     ;
 
-    public String addAudioToPlaylist(String playlistName, String audioID) throws Exception{
+    public String addAudioToPlaylist(String playlistName, String audioID) throws Exception {
         if (this.listener instanceof PremiumListener) {
             Audio foundAudio = null;
             for (Audio allAudios : Database.getDatabase().getAllAudios()) {
@@ -215,7 +215,7 @@ public class ListenerController extends UserAccountController {
             }
             for (Playlist listenerPlaylist : this.listener.getListenerPlaylists()) {
                 if (listenerPlaylist != null) {
-                    if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio!= null) {
+                    if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio != null) {
                         listenerPlaylist.getPlaylistAudios().add(foundAudio);
                         listener.getAudiosSuggestion().add(foundAudio);
                         listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
@@ -236,7 +236,7 @@ public class ListenerController extends UserAccountController {
                 }
                 for (Playlist listenerPlaylist : this.listener.getListenerPlaylists()) {
                     if (listenerPlaylist != null) {
-                        if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio!= null) {
+                        if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio != null) {
                             listenerPlaylist.getPlaylistAudios().add(foundAudio);
                             listener.getAudiosSuggestion().add(foundAudio);
                             listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
@@ -374,7 +374,8 @@ public class ListenerController extends UserAccountController {
         int index = 1;
         for (int i = 0; i <= 10; i++) {
             Random random = new Random();
-            if (this.listener.getGenresSuggestion().size() == 0) return "Spotify needs more Info to suggest songs to you. please Be more Active. :)";
+            if (this.listener.getGenresSuggestion().size() == 0)
+                return "Spotify needs more Info to suggest songs to you. please Be more Active. :)";
             int randomIndex = random.nextInt(0, this.listener.getGenresSuggestion().size());
             List<Genre> genresList = new ArrayList<>(this.listener.getGenresSuggestion());
             Genre genre = genresList.get(randomIndex);
@@ -391,11 +392,11 @@ public class ListenerController extends UserAccountController {
         return suggestions;
     }
 
-    public String listenerSignUp(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
+    public static String listenerSignUp(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
         for (UserAccount users : Database.getDatabase().getAllUsers()) {
             if (users != null) {
                 if (users.getUserName().equals(userName)) {
-                    throw new Exception("this username is already taken.");
+                    throw new MyException("this username is already taken.");
                 }
             }
         }

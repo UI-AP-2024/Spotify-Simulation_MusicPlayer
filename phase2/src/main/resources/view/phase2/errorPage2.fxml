@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="120.0" prefWidth="300.0" style="-fx-background-color: #121314;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.Error2Controller">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="180.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="54.0">
+         <image>
+            <Image url="@Images/error2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
