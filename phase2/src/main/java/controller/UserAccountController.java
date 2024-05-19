@@ -90,8 +90,7 @@ public class UserAccountController {
             if (users != null) {
                if (users.getUserName().equals(username)){
                    if (users.getAccountPassword().equals(password)) {
-                       if (users instanceof Listener) {
-                           Listener listener = (Listener) users;
+                       if (users instanceof Listener listener) {
                            ListenerController.getListenerController().setListener(listener);
                            return "listener logged in.";
                        } else if (users instanceof Admin) {

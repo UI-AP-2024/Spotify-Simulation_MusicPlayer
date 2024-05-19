@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Admin;
 import model.Genre;
+import model.Listener;
 import model.Singer;
 
 import java.nio.file.Paths;
@@ -93,6 +94,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         HomePageNotLoggedInController.ctrlStage = stage;
+        LoginPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         stage.setTitle("Spotify");
