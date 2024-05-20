@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="31st commit. search method alphabetical case fixed.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SuccessMsgController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/successMsg.fxml" afterDir="false" />
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="32nd commit. Artist profile completed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AudioPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AudioPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/SignUpPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SignUpPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/AllArtists.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/AllArtists.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/Audio-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Audio-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/ListenerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/ListenerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/firstproject-musicplayer-phase2-Negarfrd/phase2/src/main/resources/view/phase2/Images&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/firstproject-musicplayer-phase2-Negarfrd/phase2/src/main/resources/view/phase2/Images",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\firstproject-musicplayer-phase2-Negarfrd\phase2\src\main\resources\view\phase2\Images" />
@@ -76,7 +83,7 @@
       <workItem from="1716052356395" duration="12921000" />
       <workItem from="1716099228835" duration="7878000" />
       <workItem from="1716107413163" duration="34408000" />
-      <workItem from="1716186595748" duration="13460000" />
+      <workItem from="1716186595748" duration="29079000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -155,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716213320410</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="32nd commit. Artist profile completed.">
+      <created>1716216950335</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716216950335</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +198,7 @@
     <MESSAGE value="29th commit. All Audios completed." />
     <MESSAGE value="30th commit. start transition added to main." />
     <MESSAGE value="31st commit. search method alphabetical case fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="31st commit. search method alphabetical case fixed." />
+    <MESSAGE value="32nd commit. Artist profile completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="32nd commit. Artist profile completed." />
   </component>
 </project>

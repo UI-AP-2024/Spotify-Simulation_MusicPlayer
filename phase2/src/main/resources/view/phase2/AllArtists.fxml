@@ -15,22 +15,22 @@
    <children>
       <AnchorPane fx:id="sideBar" prefHeight="460.0" prefWidth="160.0" style="-fx-background-color: #121212;">
          <children>
-            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" onMouseClicked="#homeAct" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/homebtn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="Searchsidebar" fitHeight="30.0" fitWidth="110.0" layoutX="11.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Searchsidebar" fitHeight="30.0" fitWidth="110.0" layoutX="11.0" layoutY="73.0" onMouseClicked="#searchAct" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/searchbtn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="LibSidebar" fitHeight="57.0" fitWidth="117.0" layoutX="11.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="LibSidebar" fitHeight="57.0" fitWidth="117.0" layoutX="11.0" layoutY="103.0" onMouseClicked="#libAct" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/lib.png" />
                </image>
             </ImageView>
-            <Button fx:id="audiosSidebar" layoutX="16.0" layoutY="138.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #121212;" text="All Audios" textFill="#a5a9a5">
+            <Button fx:id="audiosSidebar" layoutX="16.0" layoutY="138.0" mnemonicParsing="false" onAction="#AudiosAct" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #121212;" text="All Audios" textFill="#a5a9a5">
                <font>
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Font name="SansSerif Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="logoutBtn" layoutX="37.0" layoutY="329.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Log out">
+            <Button fx:id="logoutBtn" layoutX="37.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#logoutAct" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #1ED760; -fx-background-radius: 200;" text="Log out">
                <font>
                   <Font name="SansSerif Bold" size="11.0" />
                </font>
@@ -52,7 +52,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="backBtn" layoutX="166.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #141414;" text="&lt;" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="backBtn" layoutX="166.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAct" style="-fx-background-color: #141414;" text="&lt;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

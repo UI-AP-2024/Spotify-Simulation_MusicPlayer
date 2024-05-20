@@ -2,6 +2,7 @@ package view.phase2;
 
 import controller.ListenerController;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +14,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.Artist;
+import model.Audio;
 
 import java.io.IOException;
 
@@ -99,7 +102,6 @@ public class SearchController {
             for (int i = 0; i < ListenerController.getListenerController().search(searchTextField.getText()).size(); i++) {
                 resultList.getItems().clear();
                 resultList.getItems().add(ListenerController.getListenerController().search(searchTextField.getText()));
-
             }
         }
         else resultList.getItems().clear();

@@ -184,17 +184,17 @@ public class ListenerController extends UserAccountController {
         throw new NotEnoughCreditException();
     }
 
-    public String createPlaylist(String name) throws Exception {
+    public Playlist createPlaylist(String name) throws Exception {
         if (this.listener instanceof PremiumListener) {
             Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
             this.listener.getListenerPlaylists().add(newPlaylist);
-            return "playlist created successfully.";
+            return newPlaylist;
         } else {
-            if (this.playlistCounter <= 3) {
+            if (this.playlistCounter < 3) {
                 Playlist newPlaylist = new Playlist(name, this.listener.getFullName());
                 this.listener.getListenerPlaylists().add(newPlaylist);
                 this.playlistCounter++;
-                return "playlist created successfully.";
+                return newPlaylist;
             }
             throw new FreeAccountLimitException("you've reached the limit for creating playlist. if you want to create more, get premium subscription.");
         }
@@ -211,7 +211,7 @@ public class ListenerController extends UserAccountController {
                         foundAudio = allAudios;
                         break;
                     }
-                } else return "Audio not found.";
+                } else throw new Exception("audio not found.");
             }
             for (Playlist listenerPlaylist : this.listener.getListenerPlaylists()) {
                 if (listenerPlaylist != null) {
@@ -221,10 +221,10 @@ public class ListenerController extends UserAccountController {
                         listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
                         return "audio added to wanted playlist successfully.";
                     }
-                } else return "playlist not found.";
+                } else throw new Exception("playlist not found.");
             }
         } else {
-            if (this.audioInPlaylistCounter <= 10) {
+            if (this.audioInPlaylistCounter < 10) {
                 Audio foundAudio = null;
                 for (Audio allAudios : Database.getDatabase().getAllAudios()) {
                     if (allAudios != null) {
@@ -232,7 +232,7 @@ public class ListenerController extends UserAccountController {
                             foundAudio = allAudios;
                             break;
                         }
-                    } else return "audio not found.";
+                    } else throw new Exception("audio not found.");
                 }
                 for (Playlist listenerPlaylist : this.listener.getListenerPlaylists()) {
                     if (listenerPlaylist != null) {

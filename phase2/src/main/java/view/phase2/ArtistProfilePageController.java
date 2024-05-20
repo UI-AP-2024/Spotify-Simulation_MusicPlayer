@@ -100,6 +100,7 @@ public class ArtistProfilePageController implements Initializable {
         ListenerController.getListenerController().followArtist(AllArtistsPagesController.chosenArtist.getUserName());
         SuccessMsgController.textMsg = "you're now following " + AllArtistsPagesController.chosenArtist.getFullName() + " successfully.";
         loadSuccessMsg();
+        ListenerPageController.followingListView.getItems().add(AllArtistsPagesController.chosenArtist);
     }
 
     @FXML
@@ -116,10 +117,11 @@ public class ArtistProfilePageController implements Initializable {
     void report(ActionEvent event) {
         ListenerController.getListenerController().submitReport(AllArtistsPagesController.chosenArtist.getUserName(), reportDescription.getText());
         SuccessMsgController.textMsg = "report submitted. Thanks for letting us know!";
+        reportDescription.clear();
         loadSuccessMsg();
     }
 
-    private void loadSuccessMsg() {
+    public static void loadSuccessMsg() {
         FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successMsg.fxml"));
         Scene scene;
         try {

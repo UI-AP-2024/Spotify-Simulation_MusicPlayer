@@ -92,7 +92,7 @@ public class SignUpPageController {
         Scene scene;
         try {
             Stage secondStage = new Stage();
-            scene = new Scene(fxmlLoader.load(), 350, 150);
+            scene = new Scene(fxmlLoader.load(), 350, 170);
             secondStage.initModality(Modality.APPLICATION_MODAL);
             secondStage.setScene(scene);
             secondStage.setTitle("Error!");
