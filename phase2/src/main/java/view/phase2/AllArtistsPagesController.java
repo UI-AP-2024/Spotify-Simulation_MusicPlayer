@@ -96,8 +96,20 @@ public class AllArtistsPagesController implements Initializable {
 
     @FXML
     void searchAct(MouseEvent event) {
-
+        searchActionSide(ctrlStage);
     }
+
+    static void searchActionSide(Stage ctrlStage) {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Search.fxml"));
+        Scene scene;
+        try {
+            scene = new Scene(fxmlLoader.load(), 700, 450);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ctrlStage.setScene(scene);
+    }
+
     public static Artist chosenArtist;
 
     @Override

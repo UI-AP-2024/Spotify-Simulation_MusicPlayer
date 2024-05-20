@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.HomePageLoggedInController">
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.SearchController">
    <children>
-      <ImageView fitHeight="104.0" fitWidth="203.0" layoutX="150.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/logHeader.png" />
-         </image>
-      </ImageView>
-      <AnchorPane fx:id="sideBar" prefHeight="450.0" prefWidth="150.0" style="-fx-background-color: #121212;">
+      <AnchorPane fx:id="sideBar" layoutX="-1.0" prefHeight="460.0" prefWidth="161.0" style="-fx-background-color: #121212;">
          <children>
-            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" onMouseClicked="#homeSide" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/homebtn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="Searchsidebar" fitHeight="30.0" fitWidth="110.0" layoutX="11.0" layoutY="73.0" onMouseClicked="#srch" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="110.0" layoutX="11.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/searchbtn.png" />
                </image>
@@ -56,21 +50,21 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ScrollPane fx:id="scrollPaneHome" hbarPolicy="NEVER" layoutX="161.0" layoutY="115.0" prefHeight="278.0" prefWidth="538.0" style="-fx-background-color: #141414; -fx-border-color: #141414;" vbarPolicy="ALWAYS">
-         <content>
-            <GridPane fx:id="gridpane" gridLinesVisible="true" prefHeight="463.0" prefWidth="522.0" style="-fx-background-color: #141414;">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-         </content>
-      </ScrollPane>
+      <TextField fx:id="searchTextField" layoutX="263.0" layoutY="28.0" prefHeight="43.0" prefWidth="350.0" promptText="search..." style="-fx-background-radius: 20; -fx-background-color: #202020;">
+         <font>
+            <Font name="SansSerif Bold" size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="searchBtn" fitHeight="30.0" fitWidth="35.0" layoutX="620.0" layoutY="35.0" onMouseClicked="#searchAct" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/search.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="resultList" layoutX="161.0" layoutY="107.0" prefHeight="338.0" prefWidth="513.0" style="-fx-background-color: #202020; -fx-border-color: #222222;" />
+      <Button fx:id="backBtn" layoutX="161.0" layoutY="10.0" mnemonicParsing="false" onAction="#backAct" prefHeight="35.0" prefWidth="32.0" style="-fx-background-color: #121212;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

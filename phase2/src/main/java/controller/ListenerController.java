@@ -6,6 +6,7 @@ import model.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class ListenerController extends UserAccountController {
@@ -298,14 +299,16 @@ public class ListenerController extends UserAccountController {
         return sortBasedOnLikes();
     }
 
-    public String search(String name) {
-        String results = "your search's results: \n";
+    public ArrayList<Object> search(String name) {
+        //String results = "your search's results: \n";
+        ArrayList<Object> result = new ArrayList<>();
         int index = 1;
         for (Audio allAudios : Database.getDatabase().getAllAudios()) {
             if (allAudios != null) {
                 if (allAudios.getAudioTitle().equals(name)) {
-                    results += String.valueOf(index) + ". Audio: " + name + " with ID: " + allAudios.getAudioID() + "\n";
-                    index++;
+//                    results += String.valueOf(index) + ". Audio: " + name + " with ID: " + allAudios.getAudioID() + "\n";
+//                    index++;
+                    result.add(allAudios);
                 }
             }
         }
@@ -313,13 +316,14 @@ public class ListenerController extends UserAccountController {
             if (allArtists != null) {
                 if (allArtists instanceof Artist) {
                     if (allArtists.getFullName().equals(name)) {
-                        results += String.valueOf(index) + ". Artist" + name + " with userName: " + allArtists.getUserName() + "\n";
-                        index++;
+//                        results += String.valueOf(index) + ". Artist" + name + " with userName: " + allArtists.getUserName() + "\n";
+//                        index++;
+                        result.add(allArtists);
                     }
                 }
             }
         }
-        return results;
+        return result;
     }
 
     public String filterArtist(String artistName) {

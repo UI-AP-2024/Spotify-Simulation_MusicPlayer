@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="25th commit. genre picking page completed">
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="26th commit. methods added to home and artist info pages.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Search.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PodCaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PodCaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Singer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Singer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +78,7 @@
       <workItem from="1716052356395" duration="12921000" />
       <workItem from="1716099228835" duration="7878000" />
       <workItem from="1716107413163" duration="34408000" />
+      <workItem from="1716186595748" duration="4979000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -118,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716146521853</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="26th commit. methods added to home and artist info pages.">
+      <created>1716186631189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716186631189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +145,8 @@
     <MESSAGE value="23rd commit. Error fxml file added and half of login completed." />
     <MESSAGE value="24th commit. changes applied on exception classes and sign up completed." />
     <MESSAGE value="25th commit. genre picking page completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="25th commit. genre picking page completed" />
+    <MESSAGE value="26th commit. methods added to home and artist info pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="26th commit. methods added to home and artist info pages." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

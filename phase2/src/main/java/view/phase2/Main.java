@@ -100,6 +100,7 @@ public class Main extends Application {
         ArtistProfilePageController.ctrlStage = stage;
         AllArtistsPagesController.ctrlStage = stage;
         HomePageLoggedInController.ctrlStage = stage;
+        SearchController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         stage.setTitle("Spotify");

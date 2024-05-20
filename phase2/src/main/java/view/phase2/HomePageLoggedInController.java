@@ -109,7 +109,7 @@ public class HomePageLoggedInController implements Initializable {
 
     @FXML
     void srch(MouseEvent event) {
-
+        AllArtistsPagesController.searchActionSide(ctrlStage);
     }
 
     @Override
