@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="26th commit. methods added to home and artist info pages.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Search.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" afterDir="false" />
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="28th commit. All Artists &amp; search page completed.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/AllAudiosPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/AllAudiosPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
       <workItem from="1716052356395" duration="12921000" />
       <workItem from="1716099228835" duration="7878000" />
       <workItem from="1716107413163" duration="34408000" />
-      <workItem from="1716186595748" duration="4979000" />
+      <workItem from="1716186595748" duration="7082000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -122,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716186631189</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="27th commit. home (logged in) and search page completed.">
+      <created>1716193734635</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716193734635</updated>
+    </task>
+    <task id="LOCAL-00008" summary="28th commit. All Artists &amp; search page completed.">
+      <created>1716208254292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716208254292</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +154,9 @@
     <MESSAGE value="24th commit. changes applied on exception classes and sign up completed." />
     <MESSAGE value="25th commit. genre picking page completed" />
     <MESSAGE value="26th commit. methods added to home and artist info pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="26th commit. methods added to home and artist info pages." />
+    <MESSAGE value="27th commit. home (logged in) and search page completed." />
+    <MESSAGE value="28th commit. All Artists &amp; search page completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="28th commit. All Artists &amp; search page completed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
