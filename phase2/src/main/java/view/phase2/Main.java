@@ -3,10 +3,14 @@ package view.phase2;
 import controller.AdminController;
 import controller.SingerController;
 import controller.UserAccountController;
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import model.Admin;
 import model.Genre;
 import model.Listener;
@@ -104,8 +108,18 @@ public class Main extends Application {
         AllAudiosPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
+        FXMLLoader fxmlLoader1 = new FXMLLoader(Main.class.getResource("start.fxml"));
+        Scene scene1 = new Scene(fxmlLoader1.load(), 700, 450);
+        stage.setScene(scene1);
         stage.setTitle("Spotify");
-        stage.setScene(scene);
+        ScaleTransition startTransition = new ScaleTransition(Duration.seconds(0.9), scene1.getRoot());
+        startTransition.setToX(1.6);
+        startTransition.setToY(1.6);
+
+        startTransition.setOnFinished(actionEvent -> {
+            stage.setScene(scene);
+        });
+        startTransition.play();
         stage.show();
     }
 }

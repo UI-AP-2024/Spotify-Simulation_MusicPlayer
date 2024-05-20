@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="28th commit. All Artists &amp; search page completed.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" afterDir="false" />
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="29th commit. All Audios completed.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/startController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Images/backGround.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Images/iconStart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/start.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/AllAudiosPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/AllAudiosPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
       <workItem from="1716052356395" duration="12921000" />
       <workItem from="1716099228835" duration="7878000" />
       <workItem from="1716107413163" duration="34408000" />
-      <workItem from="1716186595748" duration="7082000" />
+      <workItem from="1716186595748" duration="9159000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716208254292</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="29th commit. All Audios completed.">
+      <created>1716210168408</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716210168408</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +166,8 @@
     <MESSAGE value="26th commit. methods added to home and artist info pages." />
     <MESSAGE value="27th commit. home (logged in) and search page completed." />
     <MESSAGE value="28th commit. All Artists &amp; search page completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="28th commit. All Artists &amp; search page completed." />
+    <MESSAGE value="29th commit. All Audios completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="29th commit. All Audios completed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
