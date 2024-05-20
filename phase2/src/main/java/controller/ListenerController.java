@@ -95,8 +95,7 @@ public class ListenerController extends UserAccountController {
     public String followArtist(String artistUserName) {
         for (UserAccount artists : Database.getDatabase().getAllUsers()) {
             if (artists != null) {
-                if (artists instanceof Artist) {
-                    Artist foundArtist = (Artist) artists;
+                if (artists instanceof Artist foundArtist) {
                     if (artists.getUserName().equals(artistUserName)) {
                         this.listener.getFollowings().add(foundArtist);
                         foundArtist.getArtistFollowers().add(this.listener);

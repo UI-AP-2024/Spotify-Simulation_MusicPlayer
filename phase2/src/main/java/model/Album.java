@@ -13,8 +13,8 @@ final public class Album {
         this.albumTitle = albumTitle;
         this.singerName = singerName;
         this.albumTracks = new ArrayList<>();
-        this.albumID = Long.parseLong(String.format("%02d", this.IdCounter));
-        this.IdCounter++;
+        this.albumID = Long.parseLong(String.format("%02d", IdCounter));
+        IdCounter++;
     }
 
     public long getAlbumID() {

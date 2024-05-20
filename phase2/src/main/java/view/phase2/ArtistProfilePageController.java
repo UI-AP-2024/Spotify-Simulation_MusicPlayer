@@ -1,5 +1,6 @@
 package view.phase2;
 
+import controller.ListenerController;
 import controller.SingerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,11 +9,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Audio;
+import model.Database;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,7 +30,7 @@ public class ArtistProfilePageController implements Initializable {
     private Button ArtistsSidebar;
 
     @FXML
-    private ListView<?> AudiosList;
+    private ListView<Audio> AudiosList;
 
     @FXML
     private ImageView HomeSideBar;
@@ -61,7 +66,11 @@ public class ArtistProfilePageController implements Initializable {
     private AnchorPane sideBar;
 
     @FXML
+    private TextField reportDescription;
+
+    @FXML
     void back(ActionEvent event) {
+        SearchController.backMethodLogged(ctrlStage);
     }
 
 
@@ -88,37 +97,62 @@ public class ArtistProfilePageController implements Initializable {
 
     @FXML
     void follow(ActionEvent event) {
-
+        ListenerController.getListenerController().followArtist(AllArtistsPagesController.chosenArtist.getUserName());
+        SuccessMsgController.textMsg = "you're now following " + AllArtistsPagesController.chosenArtist.getFullName() + " successfully.";
+        loadSuccessMsg();
     }
 
     @FXML
     void libAct(MouseEvent event) {
-
+        HomePageLoggedInController.libraryMethod(ctrlStage);
     }
 
     @FXML
     void logoutAct(ActionEvent event) {
-
+        HomePageLoggedInController.logoutMethod(ctrlStage);
     }
 
     @FXML
     void report(ActionEvent event) {
+        ListenerController.getListenerController().submitReport(AllArtistsPagesController.chosenArtist.getUserName(), reportDescription.getText());
+        SuccessMsgController.textMsg = "report submitted. Thanks for letting us know!";
+        loadSuccessMsg();
+    }
 
+    private void loadSuccessMsg() {
+        FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successMsg.fxml"));
+        Scene scene;
+        try {
+            Stage secondStage = new Stage();
+            scene = new Scene(fxmlLoader2.load(), 350, 200);
+            secondStage.initModality(Modality.APPLICATION_MODAL);
+            secondStage.setScene(scene);
+            secondStage.show();
+        } catch (IOException exp) {
+            throw new RuntimeException(exp);
+        }
     }
 
     @FXML
     void searchAct(MouseEvent event) {
-
+        AllArtistsPagesController.searchActionSide(ctrlStage);
     }
 
     @FXML
     void homeSideAct(MouseEvent event) {
-
+        AllArtistsPagesController.loadHomeLogged(ctrlStage);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         artistNameText.setText(AllArtistsPagesController.chosenArtist.getFullName());
         bioText.setText(AllArtistsPagesController.chosenArtist.getArtistBio());
+        for (Audio audio : Database.getDatabase().getAllAudios()) {
+            if (audio != null) {
+                if (audio.getArtistName().equals(AllArtistsPagesController.chosenArtist.getFullName())) {
+                    AudiosList.getItems().add(audio);
+                }
+            }
+        }
     }
 }
