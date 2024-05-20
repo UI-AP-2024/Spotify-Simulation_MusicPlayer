@@ -151,7 +151,6 @@ public class GenrePickingController {
                 throw new RuntimeException(exp);
             }
         }
-        ErrorController.textMsg = "Successful";
         FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successPage.fxml"));
         Scene scene;
         try {

@@ -305,7 +305,7 @@ public class ListenerController extends UserAccountController {
         int index = 1;
         for (Audio allAudios : Database.getDatabase().getAllAudios()) {
             if (allAudios != null) {
-                if (allAudios.getAudioTitle().equals(name)) {
+                if (allAudios.getAudioTitle().equalsIgnoreCase(name)) {
 //                    results += String.valueOf(index) + ". Audio: " + name + " with ID: " + allAudios.getAudioID() + "\n";
 //                    index++;
                     result.add(allAudios);
@@ -315,7 +315,7 @@ public class ListenerController extends UserAccountController {
         for (UserAccount allArtists : Database.getDatabase().getAllUsers()) {
             if (allArtists != null) {
                 if (allArtists instanceof Artist) {
-                    if (allArtists.getFullName().equals(name)) {
+                    if (allArtists.getFullName().equalsIgnoreCase(name)) {
 //                        results += String.valueOf(index) + ". Artist" + name + " with userName: " + allArtists.getUserName() + "\n";
 //                        index++;
                         result.add(allArtists);

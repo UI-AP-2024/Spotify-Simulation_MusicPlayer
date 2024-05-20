@@ -95,10 +95,14 @@ public class SearchController {
 
     @FXML
     void searchAct(MouseEvent event) {
-        for (int i = 0; i < ListenerController.getListenerController().search(searchTextField.getText()).size(); i++) {
-            resultList.getItems().clear();
-            resultList.getItems().add(ListenerController.getListenerController().search(searchTextField.getText()));
+        if (ListenerController.getListenerController().search(searchTextField.getText()).size() != 0) {
+            for (int i = 0; i < ListenerController.getListenerController().search(searchTextField.getText()).size(); i++) {
+                resultList.getItems().clear();
+                resultList.getItems().add(ListenerController.getListenerController().search(searchTextField.getText()));
+
+            }
         }
+        else resultList.getItems().clear();
     }
 
 }

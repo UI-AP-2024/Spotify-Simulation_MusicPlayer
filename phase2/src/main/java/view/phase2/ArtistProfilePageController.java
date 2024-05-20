@@ -111,6 +111,11 @@ public class ArtistProfilePageController implements Initializable {
 
     }
 
+    @FXML
+    void homeSideAct(MouseEvent event) {
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         artistNameText.setText(AllArtistsPagesController.chosenArtist.getFullName());

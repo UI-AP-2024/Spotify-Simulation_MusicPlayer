@@ -17,7 +17,7 @@
    <children>
       <AnchorPane fx:id="sideBar" layoutX="2.0" layoutY="1.0" prefHeight="470.0" prefWidth="193.0" style="-fx-background-color: #121212;">
          <children>
-            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="HomeSideBar" fitHeight="57.0" fitWidth="117.0" layoutY="24.0" onMouseClicked="#homeSideAct" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/homebtn.png" />
                </image>
