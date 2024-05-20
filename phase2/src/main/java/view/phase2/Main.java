@@ -36,7 +36,7 @@ public class Main extends Application {
         s2.createNewAlbum("Discouraged Ones");
         s2.publishNewSong("Gone", Genre.ROCK, "A dead start in my head and the day's been laid\n" + "The things I really want, always torn from my heart\n" + "You never saw the way how I wanted you to stay\n" +
                 "And now you're gone, I'm on my own\n" + "When I was thinking this was something permanent\n" + "You were already thinking of going away", "https://ts14.tarafdari.com/contents/user744012/content-sound/katatonia_-_gone_live.mp3", "src/main/resources/view/phase2/Images/katatonia.png", 2);
-        s2.publishNewSong("DeadHouse", Genre.ROCK, "Somehow I never leave\n" + "This dead house\n" + "Somehow I don't mind being gone\n" +
+        s2.publishNewSong("DeadHouse", Genre.INTERVIEW, "Somehow I never leave\n" + "This dead house\n" + "Somehow I don't mind being gone\n" +
                 "And if you think you've seen me\n" + "I have to prove you\n" + "That you're wrong", "https://dl.psnmusic.com/Top%20Single/Katatonia%20-%20Deadhouse%20%28128%29.mp3", "src/main/resources/view/phase2/Images/katatonia.png", 2);
         s2.createNewAlbum("The Great distance");
         s2.publishNewSong("Day", Genre.COUNTRY, "Grey park look the same\n" + "And the days are pale\n" +
@@ -46,13 +46,13 @@ public class Main extends Application {
         SingerController s3 = new SingerController();
         s3.setSinger(anathema);
         s3.createNewAlbum("Judgement");
-        s3.publishNewSong("Deep", Genre.INTERVIEW, "A fettered heart, waking\n" +
+        s3.publishNewSong("Deep", Genre.JAZZ, "A fettered heart, waking\n" +
                 "Tainted youth, fading\n" +
                 "Leave it all behind\n" +
                 "Delirious again\n" +
                 "Mesmerize my senses\n" +
                 "Souls entwine one more time", "https://ts2.tarafdari.com/contents/user6984/content-sound/anathema_-_deep_mp3.pm_.mp3", "src/main/resources/view/phase2/Images/anathema.png", 4);
-        s3.publishNewSong("One Last Goodbye", Genre.SOCIETY, "Somehow I knew you would leave me this way\n" +
+        s3.publishNewSong("One Last Goodbye", Genre.HIPHOP, "Somehow I knew you would leave me this way\n" +
                 "And somehow I knew you could never, never stay\n" +
                 "And in the early morning light after a silent peaceful night\n" + "You took my heart away and I grieve", "https://ts1.tarafdari.com/contents/user85869/content-sound/04_-_one_last_goodbye.mp3", "src/main/resources/view/phase2/Images/anathema.png", 4);
         //
@@ -60,10 +60,10 @@ public class Main extends Application {
         SingerController s4 = new SingerController();
         s4.setSinger(opeth);
         s4.createNewAlbum("Still Life");
-        s4.publishNewSong("Hope Leaves", Genre.ROCK, "In the corner beside my window\n" +
+        s4.publishNewSong("Hope Leaves", Genre.SOCIETY, "In the corner beside my window\n" +
                 "Hangs a lonely photograph\n" + "There is no reason\n" + "I'd never notice a memory that could hold me back\n" +
                 "There is a wound that's always bleeding\n" + "There is a road I'm always walking\n" + "And I know you'll never return to this place", "https://ts5.tarafdari.com/contents/user664487/content-sound/opeth_-_hope_leaves.mp3", "src/main/resources/view/phase2/Images/opeth.png", 5);
-        s4.publishNewSong("Harvest", Genre.COUNTRY, "Into the orchard, I walk peering way past the gate\n" +
+        s4.publishNewSong("Harvest", Genre.TRUE_CRIME, "Into the orchard, I walk peering way past the gate\n" +
                 "Wilted scenes for us who couldn't wait\n" + "Drained by the coldest caress\n" + "Stalking shadows ahead\n" +
                 "Halo of death\n" + "All I see is departure\n" + "Mourner's lament, but it's me who's the martyr", "https://ts2.tarafdari.com/contents/user6984/content-sound/opeth_-_harvest.mp3", "src/main/resources/view/phase2/Images/opeth.png", 5);
         //
@@ -71,7 +71,7 @@ public class Main extends Application {
         SingerController s5 = new SingerController();
         s5.setSinger(theWeekend);
         s5.createNewAlbum("Star");
-        s5.publishNewSong("Save Your Tears", Genre.POP, "Take me back 'cause I wanna stay\n" +
+        s5.publishNewSong("Save Your Tears", Genre.COUNTRY, "Take me back 'cause I wanna stay\n" +
                 "Save your tears for another\n" + "Save your tears for another day\n" +
                 "Save your tears for another day", "https://ts5.tarafdari.com/contents/user628719/content-sound/the_weeknd_-_save_your_tears.mp3", "src/main/resources/view/phase2/Images/syt.png", 6);
         //
@@ -79,7 +79,7 @@ public class Main extends Application {
         SingerController s6 = new SingerController();
         s6.setSinger(arctic);
         s6.createNewAlbum("AM");
-        s6.publishNewSong("505", Genre.COUNTRY, "But I crumble completely when you cry\n" +
+        s6.publishNewSong("505", Genre.JAZZ, "But I crumble completely when you cry\n" +
                 "It seems like once again you've had to greet me with goodbye\n" +
                 "I'm always just about to go and spoil a surprise\n" + "Take my hands off of your eyes too soon", "https://ts2.tarafdari.com/contents/user601585/content-sound/arctic_monkeys_-_505.mp3", "src/main/resources/view/phase2/Images/am.png", 7);
         s6.publishNewSong("Arabella", Genre.ROCK, "Arabella's got a '70s head\n" +
@@ -97,6 +97,9 @@ public class Main extends Application {
         LoginPageController.ctrlStage = stage;
         SignUpPageController.ctrlStage = stage;
         GenrePickingController.ctrlStage = stage;
+        ArtistProfilePageController.ctrlStage = stage;
+        AllArtistsPagesController.ctrlStage = stage;
+        HomePageLoggedInController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         stage.setTitle("Spotify");

@@ -9,6 +9,7 @@ final public class Singer extends Artist{
     public Singer(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate, String artistBio) throws Exception {
         super(userName, accountPassword, fullName, email, phoneNumber, birthDate, artistBio);
         this.singerAlbums = new ArrayList<>();
+        Database.getDatabase().getAllUsers().add(this);
     }
 
     public ArrayList<Album> getSingerAlbums() {

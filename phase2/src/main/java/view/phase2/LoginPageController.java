@@ -41,14 +41,7 @@ public class LoginPageController {
         String text;
         try {
             UserAccountController.getUserAccountController().login(usernameTextField.getText(), passwordTextField.getText());
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageLoggedIn.fxml"));
-            Scene scene;
-            try {
-                scene = new Scene(fxmlLoader.load(), 700, 450);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            ctrlStage.setScene(scene);
+            AllArtistsPagesController.loadHomeLogged(ctrlStage);
         } catch (Exception e) {
             text = e.getMessage();
             ErrorController.textMsg = text;

@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="24th commit. changes applied on exception classes and sign up completed.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/successController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/successPage.fxml" afterDir="false" />
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="25th commit. genre picking page completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/GenrePickingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/GenrePickingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PodCaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PodCaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Singer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Singer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllArtistsPagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AllAudiosPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/HomePageLoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/SignUpPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SignUpPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/GenrePicking-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/GenrePicking-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/ArtistProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/homePageLoggedIn.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,7 @@
       <workItem from="1716042579840" duration="970000" />
       <workItem from="1716052356395" duration="12921000" />
       <workItem from="1716099228835" duration="7878000" />
-      <workItem from="1716107413163" duration="20756000" />
+      <workItem from="1716107413163" duration="34408000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -108,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716119308799</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="25th commit. genre picking page completed">
+      <created>1716146521853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716146521853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +140,18 @@
     <MESSAGE value="22nd commit. main added and home (not logged in) completed." />
     <MESSAGE value="23rd commit. Error fxml file added and half of login completed." />
     <MESSAGE value="24th commit. changes applied on exception classes and sign up completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="24th commit. changes applied on exception classes and sign up completed." />
+    <MESSAGE value="25th commit. genre picking page completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="25th commit. genre picking page completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/UserAccountController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

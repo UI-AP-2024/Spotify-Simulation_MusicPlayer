@@ -19,17 +19,19 @@ public class UserAccountController {
         return userAccountController;
     }
 
-    public String showAllArtists(){ //used for both admin and listener
+    public ArrayList<Artist> showAllArtists(){ //used for both admin and listener
         int index = 1;
-        String list = "All existing artists:\n";
+        ArrayList<Artist> artistArrayList = new ArrayList<>();
+        //String list = "All existing artists:\n";
         for (UserAccount artists : Database.getDatabase().getAllUsers()) {
             if (artists != null) {
                 if (artists instanceof Artist) {
-                    list += String.valueOf(index) + ". " + artists.toString() + "\n";
+                    //list += String.valueOf(index) + ". " + artists.toString() + "\n";
+                    artistArrayList.add((Artist) artists);
                 }
             }
         }
-        return list;
+        return artistArrayList;
     }
 
     public String showSpecificArtist(String userName){

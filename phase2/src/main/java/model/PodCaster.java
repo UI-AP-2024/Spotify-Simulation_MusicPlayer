@@ -9,6 +9,7 @@ final public class PodCaster extends Artist {
     public PodCaster(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate, String artistBio) throws Exception {
         super(userName, accountPassword, fullName, email, phoneNumber, birthDate, artistBio);
         this.artistPodcasts = new ArrayList<>();
+        Database.getDatabase().getAllUsers().add(this);
     }
 
     public ArrayList<Podcast> getArtistPodcasts() {

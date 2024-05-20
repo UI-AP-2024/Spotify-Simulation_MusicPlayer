@@ -369,21 +369,21 @@ public class ListenerController extends UserAccountController {
         this.listener.getGenresSuggestion().add(fav);
     }
 
-    public String suggestAudios() {
-        String suggestions = "10 suggested Audios based on your recent activity:\n";
+    public ArrayList<Audio> suggestAudios() {
+        //String suggestions = "10 suggested Audios based on your recent activity:\n";
+        ArrayList<Audio> suggestions = new ArrayList<>();
         int index = 1;
         for (int i = 0; i <= 10; i++) {
             Random random = new Random();
-            if (this.listener.getGenresSuggestion().size() == 0)
-                return "Spotify needs more Info to suggest songs to you. please Be more Active. :)";
             int randomIndex = random.nextInt(0, this.listener.getGenresSuggestion().size());
             List<Genre> genresList = new ArrayList<>(this.listener.getGenresSuggestion());
             Genre genre = genresList.get(randomIndex);
             for (Audio allAudios : Database.getDatabase().getAllAudios()) {
                 if (allAudios != null) {
                     if (allAudios.getAudioGenre().equals(genre)) {
-                        suggestions += String.valueOf(index) + ". " + allAudios.getAudioTitle() + " by " + allAudios.getArtistName() + "\n";
-                        index++;
+//                        suggestions += String.valueOf(index) + ". " + allAudios.getAudioTitle() + " by " + allAudios.getArtistName() + "\n";
+//                        index++;
+                        suggestions.add(allAudios);
                         break;
                     }
                 }
