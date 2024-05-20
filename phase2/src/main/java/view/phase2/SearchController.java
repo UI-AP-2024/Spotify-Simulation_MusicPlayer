@@ -3,6 +3,8 @@ package view.phase2;
 import controller.ListenerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -12,7 +14,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import javax.security.auth.callback.Callback;
+import java.io.IOException;
+
 
 public class SearchController {
     public static Stage ctrlStage;
@@ -61,7 +64,18 @@ public class SearchController {
 
     @FXML
     void backAct(ActionEvent event) {
+        backMethodLogged(ctrlStage);
+    }
 
+    static void backMethodLogged(Stage ctrlStage) {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageLoggedIn.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(), 700, 450);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ctrlStage.setScene(scene);
     }
 
     @FXML

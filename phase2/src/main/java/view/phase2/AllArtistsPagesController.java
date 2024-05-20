@@ -1,5 +1,6 @@
 package view.phase2;
 
+import controller.SingerController;
 import controller.UserAccountController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -65,7 +66,7 @@ public class AllArtistsPagesController implements Initializable {
 
     @FXML
     void backAct(ActionEvent event) {
-
+        SearchController.backMethodLogged(ctrlStage);
     }
 
     @FXML
