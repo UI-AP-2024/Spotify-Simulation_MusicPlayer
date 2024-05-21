@@ -83,7 +83,7 @@ public class HomePageLoggedInController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ListenerPage.fxml"));
         Scene scene;
         try {
-            scene = new Scene(fxmlLoader.load(), 700, 450);
+            scene = new Scene(fxmlLoader.load(), 736, 450);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

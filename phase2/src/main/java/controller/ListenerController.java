@@ -242,11 +242,11 @@ public class ListenerController extends UserAccountController {
                             listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
                             this.audioInPlaylistCounter++;
                             return "audio added to wanted playlist successfully.";
-                        }
-                    } else return "playlist not found.";
+                        } else throw new Exception("playlist not found.");
+                    }
                 }
             }
-            throw new FreeAccountLimitException("you've reached the limit for adding songs to this playlist. if you want to add more, get premium subscription.");
+            else throw new FreeAccountLimitException("you've reached the limit for adding songs to this playlist. if you want to add more, get premium subscription.");
         }
         return "";
     }

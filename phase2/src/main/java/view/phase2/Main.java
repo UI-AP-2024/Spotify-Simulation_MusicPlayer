@@ -108,6 +108,7 @@ public class Main extends Application {
         AllAudiosPageController.ctrlStage = stage;
         ListenerPageController.ctrlStage = stage;
         AudioPageController.ctrlStage = stage;
+        PremiumPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         FXMLLoader fxmlLoader1 = new FXMLLoader(Main.class.getResource("start.fxml"));
