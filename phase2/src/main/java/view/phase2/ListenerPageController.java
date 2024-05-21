@@ -129,7 +129,7 @@ public class ListenerPageController implements Initializable {
         for (Artist followings : ListenerController.getListenerController().getListener().getFollowings()) {
             if (followings != null) {
                 followingListView.getItems().add(followings);
-            } else followingListView.getItems().clear();
+            }
         }
         for (Playlist playlist : ListenerController.getListenerController().getListener().getListenerPlaylists()) {
             if (playlist != null) {

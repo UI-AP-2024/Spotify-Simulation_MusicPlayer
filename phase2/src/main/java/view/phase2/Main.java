@@ -115,7 +115,7 @@ public class Main extends Application {
         Scene scene1 = new Scene(fxmlLoader1.load(), 700, 450);
         stage.setScene(scene1);
         stage.setTitle("Spotify");
-        ScaleTransition startTransition = new ScaleTransition(Duration.seconds(0.9), scene1.getRoot());
+        ScaleTransition startTransition = new ScaleTransition(Duration.seconds(1.2), scene1.getRoot());
         startTransition.setToX(1.6);
         startTransition.setToY(1.6);
 
