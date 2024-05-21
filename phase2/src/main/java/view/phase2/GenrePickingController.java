@@ -151,6 +151,7 @@ public class GenrePickingController {
                 throw new RuntimeException(exp);
             }
         }
+        else {
         FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successPage.fxml"));
         Scene scene;
         try {
@@ -166,6 +167,8 @@ public class GenrePickingController {
         Scene scene2 = new Scene(fxmlLoader.load(), 700, 450);
         ctrlStage.setScene(scene2);
         ctrlStage.show();
+        }
+
     }
 
 
