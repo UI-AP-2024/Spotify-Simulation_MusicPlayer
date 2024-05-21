@@ -70,8 +70,6 @@ public class ListenerController extends UserAccountController {
                     playedAudio = allAudios;
                     playedAudio.numOfPlays++;
                     listener.getNumOfListenedAudios().put(playedAudio, playedAudio.getNumOfPlays());
-                    listener.getAudiosSuggestion().add(playedAudio);
-                    listener.getGenresSuggestion().add(playedAudio.getAudioGenre());
                 }
             }
         }
@@ -84,8 +82,6 @@ public class ListenerController extends UserAccountController {
                 if (allAudios.getAudioID().equals(ID)) {
                     likedAudio = allAudios;
                     likedAudio.numOfLikes++;
-                    listener.getAudiosSuggestion().add(likedAudio);
-                    listener.getGenresSuggestion().add(likedAudio.getAudioGenre());
                 }
             }
         }
@@ -217,8 +213,6 @@ public class ListenerController extends UserAccountController {
                 if (listenerPlaylist != null) {
                     if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio != null) {
                         listenerPlaylist.getPlaylistAudios().add(foundAudio);
-                        listener.getAudiosSuggestion().add(foundAudio);
-                        listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
                         return "audio added to wanted playlist successfully.";
                     }
                 } else throw new Exception("playlist not found.");
@@ -238,8 +232,6 @@ public class ListenerController extends UserAccountController {
                     if (listenerPlaylist != null) {
                         if (listenerPlaylist.getPlaylistName().equals(playlistName) && foundAudio != null) {
                             listenerPlaylist.getPlaylistAudios().add(foundAudio);
-                            listener.getAudiosSuggestion().add(foundAudio);
-                            listener.getGenresSuggestion().add(foundAudio.getAudioGenre());
                             this.audioInPlaylistCounter++;
                             return "audio added to wanted playlist successfully.";
                         }

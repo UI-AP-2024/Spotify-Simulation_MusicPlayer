@@ -23,18 +23,18 @@ public class Main extends Application {
     public static void main(String[] args) throws Exception {
         //System.out.println("Hi there :)");
         AdminController adminController = new AdminController();
-        adminController.setAdmin(Admin.getAdmin("admin01", "adminPass", "Admin", "admin01@gmail.com","09121112233",LocalDate.of(2005,7,10)));
+        adminController.setAdmin(Admin.getAdmin("admin01", "adminPass", "Admin", "admin01@gmail.com", "09121112233", LocalDate.of(2005, 7, 10)));
         //
         Singer theNeighborhood = new Singer("TheNBHD", "nbhd123", "The Neighborhood", "thenbhd@gmail.com", "09123456789", LocalDate.of(2000, 9, 12), "American alternative rock band");
         SingerController s1 = new SingerController();
         s1.setSinger(theNeighborhood);
         s1.createNewAlbum("Wiped Out!");
         s1.publishNewSong("The Beach", Genre.POP, "I'm sick, and I'm tired too\n" + "I can admit, I am not fireproof\n" + "I feel it " +
-                "burning me\n" + "I feel it burning you\n" + "I hope I don't murder me\n" + "I hope I don't burden you\n" + "If I do, If I do", "https://ts15.tarafdari.com/contents/user847852/content-sound/the_beach_-_the_neighbourhood.mp3",  "src/main/resources/view/phase2/Images/nbhd1.png", 1);
+                "burning me\n" + "I feel it burning you\n" + "I hope I don't murder me\n" + "I hope I don't burden you\n" + "If I do, If I do", "https://ts15.tarafdari.com/contents/user847852/content-sound/the_beach_-_the_neighbourhood.mp3", "src/main/resources/view/phase2/Images/nbhd1.png", 1);
         s1.publishNewSong("Sweater Weather", Genre.POP, "And all I am is a man\n" + "I want the world in my hands\n" + "I hate the beach\n" +
                 "But I stand in California with my toes in the sand\n" + "Use the sleeves of my sweater\n" + "Let's have an adventure\n" + "Head in the clouds but my gravity centered", "https://dl.musicdel.ir/Music/1400/09/the_neighbourhood_sweater_weather%20128.mp3", "src/main/resources/view/phase2/Images/nbhd2.png", 1);
         //
-        Singer katatonia = new Singer("katatonia", "kataPass", "Katatonia", "katatoniaaa@gmail.com", "09001234567", LocalDate.of(2005,7,10), "Swedish heavy metal band");
+        Singer katatonia = new Singer("katatonia", "kataPass", "Katatonia", "katatoniaaa@gmail.com", "09001234567", LocalDate.of(2005, 7, 10), "Swedish heavy metal band");
         SingerController s2 = new SingerController();
         s2.setSinger(katatonia);
         s2.createNewAlbum("Discouraged Ones");
@@ -46,7 +46,7 @@ public class Main extends Application {
         s2.publishNewSong("Day", Genre.COUNTRY, "Grey park look the same\n" + "And the days are pale\n" +
                 "I never thought it would rain this way\n" + "I should be knowing that, it used to be me", "https://ts15.tarafdari.com/contents/user797152/content-sound/112_-_day_live_-_katatonia_320.mp3", "src/main/resources/view/phase2/Images/katatonia2.png", 3);
         //
-        Singer anathema = new Singer("ana121thema", "pass121", "Anathema", "testMail@gmail.com", "09987654321", LocalDate.of(1998,10,5), "Rock band from liverpool");
+        Singer anathema = new Singer("ana121thema", "pass121", "Anathema", "testMail@gmail.com", "09987654321", LocalDate.of(1998, 10, 5), "Rock band from liverpool");
         SingerController s3 = new SingerController();
         s3.setSinger(anathema);
         s3.createNewAlbum("Judgement");
@@ -71,7 +71,7 @@ public class Main extends Application {
                 "Wilted scenes for us who couldn't wait\n" + "Drained by the coldest caress\n" + "Stalking shadows ahead\n" +
                 "Halo of death\n" + "All I see is departure\n" + "Mourner's lament, but it's me who's the martyr", "https://ts2.tarafdari.com/contents/user6984/content-sound/opeth_-_harvest.mp3", "src/main/resources/view/phase2/Images/opeth.png", 5);
         //
-        Singer theWeekend = new Singer("oscar", "passOscar", "The Weekend", "oscar@gmail.com", "09087654759", LocalDate.of(2012,3,10), "Singer And SongWriter");
+        Singer theWeekend = new Singer("oscar", "passOscar", "The Weekend", "oscar@gmail.com", "09087654759", LocalDate.of(2012, 3, 10), "Singer And SongWriter");
         SingerController s5 = new SingerController();
         s5.setSinger(theWeekend);
         s5.createNewAlbum("Star");
@@ -79,7 +79,7 @@ public class Main extends Application {
                 "Save your tears for another\n" + "Save your tears for another day\n" +
                 "Save your tears for another day", "https://ts5.tarafdari.com/contents/user628719/content-sound/the_weeknd_-_save_your_tears.mp3", "src/main/resources/view/phase2/Images/syt.png", 6);
         //
-        Singer arctic = new Singer("arctic", "aPass", "Arctic Monkeys", "arcMonkeys@gmail.com", "09012398736", LocalDate.of(2000,3,4), "Also known as: Death Ramps");
+        Singer arctic = new Singer("arctic", "aPass", "Arctic Monkeys", "arcMonkeys@gmail.com", "09012398736", LocalDate.of(2000, 3, 4), "Also known as: Death Ramps");
         SingerController s6 = new SingerController();
         s6.setSinger(arctic);
         s6.createNewAlbum("AM");
@@ -109,6 +109,7 @@ public class Main extends Application {
         ListenerPageController.ctrlStage = stage;
         AudioPageController.ctrlStage = stage;
         PremiumPageController.ctrlStage = stage;
+        playlistsPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         FXMLLoader fxmlLoader1 = new FXMLLoader(Main.class.getResource("start.fxml"));

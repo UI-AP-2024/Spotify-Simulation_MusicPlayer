@@ -11,7 +11,6 @@ public class Listener extends UserAccount {
     private static ArrayList<Genre> favGenres;
     private ArrayList<Artist> followings;
     private Set<Genre> genresSuggestion;
-    private Set<Audio> audiosSuggestion;
 
     public Listener(String userName, String accountPassword, String fullName, String email, String phoneNumber, LocalDate birthDate) throws Exception {
         super(userName, accountPassword, fullName, email, phoneNumber, birthDate);
@@ -19,7 +18,6 @@ public class Listener extends UserAccount {
         this.followings = new ArrayList<>();
         this.listenerPlaylists = new ArrayList<>();
         this.numOfListenedAudios = new HashMap<>();
-        this.audiosSuggestion = new HashSet<>();
         this.genresSuggestion = new HashSet<>();
     }
 
@@ -59,9 +57,6 @@ public class Listener extends UserAccount {
         return genresSuggestion;
     }
 
-    public Set<Audio> getAudiosSuggestion() {
-        return audiosSuggestion;
-    }
 
     @Override
     public String toString() {

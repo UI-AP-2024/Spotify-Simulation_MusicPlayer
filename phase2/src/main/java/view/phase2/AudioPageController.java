@@ -89,29 +89,35 @@ public class AudioPageController implements Initializable {
     @FXML
     void allArtistsAct(MouseEvent event) {
         HomePageLoggedInController.allArtistsSideBar(ctrlStage);
+        mediaPlayer.pause();
     }
 
     @FXML
     void allAudiosAct(MouseEvent event) {
         ArtistProfilePageController.allAudiosSideBar(ctrlStage);
+        mediaPlayer.pause();
     }
     @FXML
     void libAct(MouseEvent event) {
         HomePageLoggedInController.libraryMethod(ctrlStage);
+        mediaPlayer.pause();
     }
 
     @FXML
     void logoutAct(ActionEvent event) {
         HomePageLoggedInController.logoutMethod(ctrlStage);
+        mediaPlayer.pause();
     }
     @FXML
     void searchAct(MouseEvent event) {
         AllArtistsPagesController.searchActionSide(ctrlStage);
+        mediaPlayer.pause();
     }
 
     @FXML
     void homeSideAct(MouseEvent event) {
         AllArtistsPagesController.loadHomeLogged(ctrlStage);
+        mediaPlayer.pause();
     }
 
     @FXML

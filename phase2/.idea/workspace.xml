@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="34th commit. premium page completed.">
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="35th commit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/PremiumPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/PremiumPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/playlistsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/playlistsPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/playlistsPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/playlistsPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
       <workItem from="1716099228835" duration="7878000" />
       <workItem from="1716107413163" duration="34408000" />
       <workItem from="1716186595748" duration="32653000" />
-      <workItem from="1716269551487" duration="1239000" />
+      <workItem from="1716269551487" duration="3794000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716251854403</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="35th commit.">
+      <created>1716271117105</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716271117105</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,21 +217,7 @@
     <MESSAGE value="32nd commit. Artist profile completed." />
     <MESSAGE value="33rd commit. Audio info page completed." />
     <MESSAGE value="34th commit. premium page completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="34th commit. premium page completed." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ListenerController.java</url>
-          <line>204</line>
-          <properties class="controller.ListenerController" method="addAudioToPlaylist">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="35th commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="35th commit." />
   </component>
 </project>

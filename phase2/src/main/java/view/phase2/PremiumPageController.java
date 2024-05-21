@@ -75,7 +75,7 @@ public class PremiumPageController implements Initializable {
     }
 
     @FXML
-    void logoutAct(ActionEvent event) {
+    void logoutAct(MouseEvent event) {
         HomePageLoggedInController.logoutMethod(ctrlStage);
     }
     @FXML
