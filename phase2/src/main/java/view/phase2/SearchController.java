@@ -108,35 +108,3 @@ public class SearchController {
         } else resultList.getItems().clear();
     }
 }
-// resultList.getSelectionModel().selectedItemProperty().addListener((p, o, n) -> {
-//         if (n != null) {
-//         for (UserAccount searchedArtist : Database.getDatabase().getAllUsers()) {
-//         if (searchedArtist.equals(n)) {
-//         AllArtistsPagesController.chosenArtist = (Artist) searchedArtist;
-//         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ArtistProfilePage.fxml"));
-//        Scene scene = null;
-//        try {
-//        scene = new Scene(fxmlLoader.load(), 738, 470);
-//        } catch (IOException e) {
-//        throw new RuntimeException(e);
-//        }
-//        ctrlStage.setScene(scene);
-//        ctrlStage.show();
-//        }
-//        }
-//        for (Audio searchedAudio : Database.getDatabase().getAllAudios()) {
-//        if (searchedAudio.equals(n)) {
-//        AllAudiosPageController.chosenAudio = searchedAudio;
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Audio-page.fxml"));
-//        Scene scene = null;
-//        try {
-//        scene = new Scene(fxmlLoader.load(), 600, 470);
-//        } catch (IOException e) {
-//        throw new RuntimeException(e);
-//        }
-//        ctrlStage.setScene(scene);
-//        ctrlStage.show();
-//        }
-//        }
-//        }
-//        });

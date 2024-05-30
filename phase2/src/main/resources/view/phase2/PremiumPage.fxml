@@ -127,5 +127,10 @@
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Text>
+      <Text fx:id="addCreditBtn" fill="WHITE" layoutX="609.0" layoutY="51.0" onMouseClicked="#updateCreditAct" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
+         <font>
+            <Font name="SansSerif Bold" size="27.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

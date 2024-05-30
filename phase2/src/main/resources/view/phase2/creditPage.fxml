@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #191414;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.CreditPageController">
+   <children>
+      <ImageView fitHeight="134.0" fitWidth="266.0" layoutX="420.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backBtn" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#backAct" prefHeight="54.0" prefWidth="60.0" style="-fx-background-color: #191414;" text="&lt;" textFill="#1bd760">
+         <font>
+            <Font name="SansSerif Bold" size="21.0" />
+         </font>
+      </Button>
+      <TextField fx:id="cardText" layoutX="120.0" layoutY="142.0" prefHeight="44.0" prefWidth="306.0" promptText="Card Number" style="-fx-background-color: gray;">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dateText" layoutX="120.0" layoutY="192.0" prefHeight="44.0" prefWidth="306.0" promptText="Expiry Date YY/MM" style="-fx-background-color: gray;">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cvvText" layoutX="120.0" layoutY="242.0" prefHeight="44.0" prefWidth="306.0" promptText="CVV2" style="-fx-background-color: gray;">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="creditTextField" layoutX="120.0" layoutY="302.0" prefHeight="34.0" prefWidth="124.0" promptText="Credit Amount $" style="-fx-background-color: gray;">
+         <font>
+            <Font name="SansSerif Bold" size="11.0" />
+         </font>
+      </TextField>
+      <Button fx:id="payBtn" layoutX="420.0" layoutY="336.0" mnemonicParsing="false" onAction="#payAct" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: #1BD760; -fx-background-radius: 20;" text="Pay">
+         <font>
+            <Font name="SansSerif Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

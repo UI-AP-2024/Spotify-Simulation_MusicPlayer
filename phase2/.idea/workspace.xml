@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="37th commit.">
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="38th commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/phase2/CreditPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/creditPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ArtistProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/AudioPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/AudioPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/GenrePickingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/GenrePickingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/ListenerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/PremiumPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/PremiumPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/phase2/playlistsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/phase2/playlistsPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/Audio-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/Audio-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/phase2/PremiumPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/phase2/PremiumPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,8 @@
       <workItem from="1716396887219" duration="191000" />
       <workItem from="1716545376158" duration="1154000" />
       <workItem from="1716548786281" duration="599000" />
-      <workItem from="1717064430446" duration="12195000" />
+      <workItem from="1717064430446" duration="12224000" />
+      <workItem from="1717094752230" duration="3889000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -210,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716275724945</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="38th commit.">
+      <created>1717079434735</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717079434735</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +251,7 @@
     <MESSAGE value="35th commit." />
     <MESSAGE value="36th commit." />
     <MESSAGE value="37th commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="37th commit." />
+    <MESSAGE value="38th commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="38th commit." />
   </component>
 </project>

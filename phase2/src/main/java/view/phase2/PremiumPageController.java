@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -13,6 +14,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.PremiumSubscription;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -54,6 +56,9 @@ public class PremiumPageController implements Initializable {
 
     @FXML
     private AnchorPane sideBar;
+
+    @FXML
+    private Text addCreditBtn;
     @FXML
     void back(ActionEvent event) {
         SearchController.backMethodLogged(ctrlStage);
@@ -86,6 +91,19 @@ public class PremiumPageController implements Initializable {
     @FXML
     void homeSideAct(MouseEvent event) {
         AllArtistsPagesController.loadHomeLogged(ctrlStage);
+    }
+
+    @FXML
+    void updateCreditAct(MouseEvent event) {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CreditPage.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(), 700, 450);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ctrlStage.setScene(scene);
+        ctrlStage.show();
     }
 
     @FXML
