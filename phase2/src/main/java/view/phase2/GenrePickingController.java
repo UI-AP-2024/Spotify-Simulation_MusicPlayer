@@ -60,7 +60,22 @@ public class GenrePickingController {
 
     @FXML
     void backAction(ActionEvent event) {
-        SignUpPageController.backMethod(ctrlStage);
+        if (ListenerController.getListenerController().getListener().getFavGenres().size() == 0) {
+            ErrorController.textMsg = "Please Choose At Least A Genre.";
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("errorPage.fxml"));
+            Scene scene;
+            try {
+                Stage secondStage = new Stage();
+                scene = new Scene(fxmlLoader.load(), 350, 150);
+                secondStage.initModality(Modality.APPLICATION_MODAL);
+                secondStage.setScene(scene);
+                secondStage.setTitle("Error!");
+                secondStage.show();
+            } catch (IOException exp) {
+                throw new RuntimeException(exp);
+            }
+        } else
+            SignUpPageController.backMethod(ctrlStage);
     }
 
 
@@ -150,23 +165,36 @@ public class GenrePickingController {
             } catch (IOException exp) {
                 throw new RuntimeException(exp);
             }
-        }
-        else {
-        FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successPage.fxml"));
-        Scene scene;
-        try {
-            Stage secondStage = new Stage();
-            scene = new Scene(fxmlLoader2.load(), 300, 120);
-            secondStage.initModality(Modality.APPLICATION_MODAL);
-            secondStage.setScene(scene);
-            secondStage.show();
-        } catch (IOException exp) {
-            throw new RuntimeException(exp);
-        }
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login-page.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load(), 700, 450);
-        ctrlStage.setScene(scene2);
-        ctrlStage.show();
+        } else if (ListenerController.getListenerController().getListener().getFavGenres().size() == 0) {
+            ErrorController.textMsg = "Please Choose At Least A Genre.";
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("errorPage.fxml"));
+            Scene scene;
+            try {
+                Stage secondStage = new Stage();
+                scene = new Scene(fxmlLoader.load(), 350, 150);
+                secondStage.initModality(Modality.APPLICATION_MODAL);
+                secondStage.setScene(scene);
+                secondStage.setTitle("Error!");
+                secondStage.show();
+            } catch (IOException exp) {
+                throw new RuntimeException(exp);
+            }
+        } else {
+            FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("successPage.fxml"));
+            Scene scene;
+            try {
+                Stage secondStage = new Stage();
+                scene = new Scene(fxmlLoader2.load(), 300, 120);
+                secondStage.initModality(Modality.APPLICATION_MODAL);
+                secondStage.setScene(scene);
+                secondStage.show();
+            } catch (IOException exp) {
+                throw new RuntimeException(exp);
+            }
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login-page.fxml"));
+            Scene scene2 = new Scene(fxmlLoader.load(), 700, 450);
+            ctrlStage.setScene(scene2);
+            ctrlStage.show();
         }
 
     }

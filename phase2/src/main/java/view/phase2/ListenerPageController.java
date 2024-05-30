@@ -47,7 +47,7 @@ public class ListenerPageController implements Initializable {
     private Button backBtn;
 
     @FXML
-    public static ListView<Artist> followingListView = new ListView<>();
+    private ListView<Artist> followingListView;
 
     @FXML
     private Button logoutBtn;
@@ -65,6 +65,7 @@ public class ListenerPageController implements Initializable {
     private AnchorPane sideBar;
     @FXML
     private TextField playListNameTextField;
+
     @FXML
     void allArtistsAct(ActionEvent event) {
         HomePageLoggedInController.allArtistsSideBar(ctrlStage);
@@ -94,10 +95,12 @@ public class ListenerPageController implements Initializable {
     void searchAct(MouseEvent event) {
         AllArtistsPagesController.searchActionSide(ctrlStage);
     }
+
     @FXML
     void backAct(ActionEvent event) {
         SearchController.backMethodLogged(ctrlStage);
     }
+
     @FXML
     void premiumAct(ActionEvent event) {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("PremiumPage.fxml"));
@@ -109,6 +112,7 @@ public class ListenerPageController implements Initializable {
         }
         ctrlStage.setScene(scene);
     }
+
     @FXML
     void addPlaylistAct(MouseEvent event) {
         try {
@@ -123,18 +127,31 @@ public class ListenerPageController implements Initializable {
             SignUpPageController.errorMethod(e, fxmlLoader);
         }
     }
+
+    public static Playlist chosenPlaylist;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nameText.setText(ListenerController.getListenerController().getListener().getFullName());
-        for (Artist followings : ListenerController.getListenerController().getListener().getFollowings()) {
-            if (followings != null) {
-                followingListView.getItems().add(followings);
+        followingListView.getItems().addAll(ListenerController.getListenerController().getListener().getFollowings());
+        playlistListView.getItems().addAll(ListenerController.getListenerController().getListener().getListenerPlaylists());
+        playlistListView.getSelectionModel().selectedItemProperty().addListener((p, o, n) -> {
+            if (n != null) {
+                for (Playlist playlist : ListenerController.getListenerController().getListener().getListenerPlaylists()) {
+                    if (playlist.equals(n)) {
+                        chosenPlaylist = playlist;
+                        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("playlistsPage.fxml"));
+                        Scene scene = null;
+                        try {
+                            scene = new Scene(fxmlLoader.load(), 700, 450);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        ctrlStage.setScene(scene);
+                        ctrlStage.show();
+                    }
+                }
             }
-        }
-        for (Playlist playlist : ListenerController.getListenerController().getListener().getListenerPlaylists()) {
-            if (playlist != null) {
-                playlistListView.getItems().add(playlist);
-            } else playlistListView.getItems().clear();
-        }
+        });
     }
 }

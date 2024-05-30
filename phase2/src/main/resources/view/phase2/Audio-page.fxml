@@ -86,7 +86,7 @@
             <Image url="@Images/like.png" />
          </image>
       </ImageView>
-      <TextField fx:id="playlistNameText" layoutX="447.0" layoutY="406.0" prefHeight="26.0" prefWidth="110.0" promptText="Playlist Name" style="-fx-background-radius: 20; -fx-background-color: #303030;" />
+      <TextField fx:id="playlistNameText" layoutX="447.0" layoutY="406.0" prefHeight="26.0" prefWidth="110.0" promptText="Playlist Name" style="-fx-background-radius: 20; -fx-background-color: #404040;" />
       <ImageView fx:id="addBtn" fitHeight="30.0" fitWidth="39.0" layoutX="558.0" layoutY="404.0" onMouseClicked="#addAct" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/add.png" />

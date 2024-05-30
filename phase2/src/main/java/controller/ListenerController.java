@@ -129,8 +129,7 @@ public class ListenerController extends UserAccountController {
     public String getPremium(PremiumSubscription premiumSubscription) throws Exception {
         if (this.listener.getListenerCredit() >= premiumSubscription.getSubscriptionCost()) {
             int index = -1;
-            if (this.listener instanceof PremiumListener) {
-                PremiumListener premiumListener = (PremiumListener) this.listener;
+            if (this.listener instanceof PremiumListener premiumListener) {
                 switch (premiumSubscription.getSubscriptionCost()) {
                     case 5: {
                         premiumListener.setSubscriptionRemainedDays(premiumListener.getSubscriptionRemainedDays() + 30);
@@ -157,16 +156,25 @@ public class ListenerController extends UserAccountController {
                     case 5: {
                         newPremium = new PremiumListener(this.listener.getUserName(), this.listener.getAccountPassword(), this.listener.getFullName(),
                                 this.listener.getEmail(), this.listener.getPhoneNumber(), this.listener.getBirthDate(), 30);
+                        newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
+                        newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
+                        newPremium.getFollowings().addAll(this.listener.getFollowings());
                         break;
                     }
                     case 9: {
                         newPremium = new PremiumListener(this.listener.getUserName(), this.listener.getAccountPassword(), this.listener.getFullName(),
                                 this.listener.getEmail(), this.listener.getPhoneNumber(), this.listener.getBirthDate(), 60);
+                        newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
+                        newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
+                        newPremium.getFollowings().addAll(this.listener.getFollowings());
                         break;
                     }
                     case 14: {
                         newPremium = new PremiumListener(this.listener.getUserName(), this.listener.getAccountPassword(), this.listener.getFullName(),
                                 this.listener.getEmail(), this.listener.getPhoneNumber(), this.listener.getBirthDate(), 180);
+                        newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
+                        newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
+                        newPremium.getFollowings().addAll(this.listener.getFollowings());
                         break;
                     }
                 }

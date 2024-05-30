@@ -79,6 +79,7 @@ public class AudioPageController implements Initializable {
 
     @FXML
     private AnchorPane sideBar;
+
     @FXML
     void back(ActionEvent event) {
         SearchController.backMethodLogged(ctrlStage);
@@ -97,6 +98,7 @@ public class AudioPageController implements Initializable {
         ArtistProfilePageController.allAudiosSideBar(ctrlStage);
         mediaPlayer.pause();
     }
+
     @FXML
     void libAct(MouseEvent event) {
         HomePageLoggedInController.libraryMethod(ctrlStage);
@@ -108,6 +110,7 @@ public class AudioPageController implements Initializable {
         HomePageLoggedInController.logoutMethod(ctrlStage);
         mediaPlayer.pause();
     }
+
     @FXML
     void searchAct(MouseEvent event) {
         AllArtistsPagesController.searchActionSide(ctrlStage);
@@ -133,19 +136,19 @@ public class AudioPageController implements Initializable {
             SignUpPageController.errorMethod(e, fxmlLoader);
         }
     }
+
     private boolean isLiked = false;
 
     @FXML
     void likeAct(MouseEvent event) {
-        if(!isLiked) {
+        if (!isLiked) {
             String path = Paths.get("src/main/resources/view/phase2/Images/liked.png").toAbsolutePath().toString();
             Image liked = new Image(path);
             likeBtn.setImage(liked);
             AllAudiosPageController.chosenAudio.numOfLikes++;
             ListenerController.getListenerController().getListener().getGenresSuggestion().add(AllAudiosPageController.chosenAudio.getAudioGenre());
             isLiked = true;
-        }
-        else if (isLiked) {
+        } else if (isLiked) {
             String path = Paths.get("src/main/resources/view/phase2/Images/like.png").toAbsolutePath().toString();
             Image notLiked = new Image(path);
             likeBtn.setImage(notLiked);
@@ -153,11 +156,13 @@ public class AudioPageController implements Initializable {
             isLiked = false;
         }
     }
+
     private boolean isPlaying;
 
     Media music;
     MediaPlayer mediaPlayer;
     int musicCounter = Database.getDatabase().getAllAudios().indexOf(AllAudiosPageController.chosenAudio);
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String coverPath = Paths.get(AllAudiosPageController.chosenAudio.getCover()).toAbsolutePath().toString();
@@ -165,7 +170,7 @@ public class AudioPageController implements Initializable {
         coverImageView.setImage(cover);
         artistNameText.setText(AllAudiosPageController.chosenAudio.getArtistName());
         audioTitleText.setText(AllAudiosPageController.chosenAudio.getAudioTitle());
-        lyrics.setText(((Music)AllAudiosPageController.chosenAudio).getLyrics());
+        lyrics.setText(((Music) AllAudiosPageController.chosenAudio).getLyrics());
         isPlaying = false;
         String path = Paths.get("src/main/resources/view/phase2/Images/play1.png").toAbsolutePath().toString();
         String path1 = Paths.get("src/main/resources/view/phase2/Images/pause1.png").toAbsolutePath().toString();
@@ -198,7 +203,7 @@ public class AudioPageController implements Initializable {
             coverImageView.setImage(cover1);
             artistNameText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getArtistName());
             audioTitleText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getAudioTitle());
-            lyrics.setText(((Music)Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
+            lyrics.setText(((Music) Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
             mediaPlayer.play();
             isPlaying = true;
             playPauseBtn.setImage(pauseImage);
@@ -216,7 +221,7 @@ public class AudioPageController implements Initializable {
             coverImageView.setImage(cover1);
             artistNameText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getArtistName());
             audioTitleText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getAudioTitle());
-            lyrics.setText(((Music)Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
+            lyrics.setText(((Music) Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
             mediaPlayer.play();
             isPlaying = true;
             playPauseBtn.setImage(pauseImage);

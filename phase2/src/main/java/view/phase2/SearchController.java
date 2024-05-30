@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
@@ -14,10 +15,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.Artist;
-import model.Audio;
+import model.*;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
 public class SearchController {
@@ -103,8 +105,38 @@ public class SearchController {
                 resultList.getItems().clear();
                 resultList.getItems().add(ListenerController.getListenerController().search(searchTextField.getText()));
             }
-        }
-        else resultList.getItems().clear();
+        } else resultList.getItems().clear();
     }
-
 }
+// resultList.getSelectionModel().selectedItemProperty().addListener((p, o, n) -> {
+//         if (n != null) {
+//         for (UserAccount searchedArtist : Database.getDatabase().getAllUsers()) {
+//         if (searchedArtist.equals(n)) {
+//         AllArtistsPagesController.chosenArtist = (Artist) searchedArtist;
+//         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ArtistProfilePage.fxml"));
+//        Scene scene = null;
+//        try {
+//        scene = new Scene(fxmlLoader.load(), 738, 470);
+//        } catch (IOException e) {
+//        throw new RuntimeException(e);
+//        }
+//        ctrlStage.setScene(scene);
+//        ctrlStage.show();
+//        }
+//        }
+//        for (Audio searchedAudio : Database.getDatabase().getAllAudios()) {
+//        if (searchedAudio.equals(n)) {
+//        AllAudiosPageController.chosenAudio = searchedAudio;
+//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Audio-page.fxml"));
+//        Scene scene = null;
+//        try {
+//        scene = new Scene(fxmlLoader.load(), 600, 470);
+//        } catch (IOException e) {
+//        throw new RuntimeException(e);
+//        }
+//        ctrlStage.setScene(scene);
+//        ctrlStage.show();
+//        }
+//        }
+//        }
+//        });

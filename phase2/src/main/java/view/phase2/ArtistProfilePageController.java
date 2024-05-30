@@ -99,8 +99,6 @@ public class ArtistProfilePageController implements Initializable {
     @FXML
     void follow(ActionEvent event) {
         ListenerController.getListenerController().followArtist(AllArtistsPagesController.chosenArtist.getUserName());
-        Artist artist = AllArtistsPagesController.chosenArtist;
-        ListenerPageController.followingListView.getItems().add(artist);
         SuccessMsgController.textMsg = "you're now following " + AllArtistsPagesController.chosenArtist.getFullName() + " successfully.";
         loadSuccessMsg();
     }

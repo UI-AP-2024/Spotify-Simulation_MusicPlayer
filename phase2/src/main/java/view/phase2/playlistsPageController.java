@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Audio;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,7 +46,7 @@ public class playlistsPageController implements Initializable {
     private AnchorPane sideBar;
 
     @FXML
-    private ListView<?> tracksList;
+    private ListView<Audio> tracksList;
     @FXML
     void back(ActionEvent event) {
         SearchController.backMethodLogged(ctrlStage);
@@ -83,6 +84,7 @@ public class playlistsPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        playlistName.setText(ListenerPageController.chosenPlaylist.getPlaylistName());
+        tracksList.getItems().addAll(ListenerPageController.chosenPlaylist.getPlaylistAudios());
     }
 }
