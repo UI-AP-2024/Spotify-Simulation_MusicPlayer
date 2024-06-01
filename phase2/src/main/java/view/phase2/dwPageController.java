@@ -15,6 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Audio;
+import model.Database;
 
 import java.io.IOException;
 import java.net.URL;
@@ -86,7 +87,7 @@ public class dwPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<Audio> shuffledList = ListenerController.getListenerController().suggestAudios();
+        List<Audio> shuffledList = Database.getDatabase().getAllAudios();
         Collections.shuffle(shuffledList);
         for (int i = 0; i < 3; i++) {
             tracksList.getItems().add(shuffledList.get(i));
