@@ -82,6 +82,7 @@ public class ListenerController extends UserAccountController {
                 if (allAudios.getAudioID().equals(ID)) {
                     likedAudio = allAudios;
                     likedAudio.numOfLikes++;
+                    this.listener.getLikedAudios().add(likedAudio);
                 }
             }
         }
@@ -159,6 +160,7 @@ public class ListenerController extends UserAccountController {
                         newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
                         newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
                         newPremium.getFollowings().addAll(this.listener.getFollowings());
+                        newPremium.getLikedAudios().addAll(this.listener.getLikedAudios());
                         break;
                     }
                     case 9: {
@@ -167,6 +169,7 @@ public class ListenerController extends UserAccountController {
                         newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
                         newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
                         newPremium.getFollowings().addAll(this.listener.getFollowings());
+                        newPremium.getLikedAudios().addAll(this.listener.getLikedAudios());
                         break;
                     }
                     case 14: {
@@ -175,6 +178,7 @@ public class ListenerController extends UserAccountController {
                         newPremium.getGenresSuggestion().addAll(this.listener.getGenresSuggestion());
                         newPremium.getListenerPlaylists().addAll(this.listener.getListenerPlaylists());
                         newPremium.getFollowings().addAll(this.listener.getFollowings());
+                        newPremium.getLikedAudios().addAll(this.listener.getLikedAudios());
                         break;
                     }
                 }

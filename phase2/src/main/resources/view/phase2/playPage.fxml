@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="220.0" prefWidth="400.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.phase2.PlayPageController">
+   <children>
+      <ImageView fx:id="cover" fitHeight="98.0" fitWidth="99.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playPauseBtn" fitHeight="30.0" fitWidth="39.0" layoutX="185.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/play1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="forBtn" fitHeight="30.0" fitWidth="39.0" layoutX="240.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/for.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="prevBtn" fitHeight="36.0" fitWidth="35.0" layoutX="120.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/pre.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="likeBtn" fitHeight="30.0" fitWidth="39.0" layoutX="324.0" layoutY="152.0" onMouseClicked="#likeAct" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/like.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="titleText" fill="WHITE" layoutX="140.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="208.9337158203125">
+         <font>
+            <Font name="SansSerif Bold" size="27.0" />
+         </font>
+      </Text>
+      <Text fx:id="artistText" fill="WHITE" layoutX="140.0" layoutY="107.0" opacity="0.58" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="SansSerif Bold" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -11,6 +11,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class CreditPageController {
     public static Stage ctrlStage;
@@ -34,6 +35,20 @@ public class CreditPageController {
     private TextField cardText;
 
     @FXML
+    private Button pinBtn;
+
+    @FXML
+    private TextField pinText;
+    private long pin;
+
+    @FXML
+    void pinAct(ActionEvent event) {
+        Random random = new Random();
+        pin = random.nextInt(900000) + 100000;
+        System.out.println("Your 6-digit PIN : " + pin);
+    }
+
+    @FXML
     void backAct(ActionEvent event) {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("PremiumPage.fxml"));
         Scene scene = null;
@@ -47,7 +62,8 @@ public class CreditPageController {
 
     @FXML
     void payAct(ActionEvent event) {
-        if (cardText.getText().length() != 0 && dateText.getText().length() != 0 && cvvText.getText().length() != 0) {
+        if (cardText.getText().length() != 0 && dateText.getText().length() != 0 && cvvText.getText().length() != 0
+                && pinText.getText().length() != 0 && Long.parseLong(pinText.getText()) == pin) {
             try {
                 ListenerController.getListenerController().getListener().setListenerCredit(Double.parseDouble(creditTextField.getText()) + ListenerController.getListenerController().getListener().getListenerCredit());
                 SuccessMsgController.textMsg = "Payment was successful";

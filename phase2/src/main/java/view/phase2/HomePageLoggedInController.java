@@ -37,6 +37,9 @@ public class HomePageLoggedInController implements Initializable {
     private ImageView LibSidebar;
 
     @FXML
+    private ImageView dw;
+
+    @FXML
     private ImageView Searchsidebar;
 
     @FXML
@@ -53,6 +56,18 @@ public class HomePageLoggedInController implements Initializable {
 
     @FXML
     private AnchorPane sideBar;
+
+    @FXML
+    void dwAct(MouseEvent event) {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dwPage.fxml"));
+        Scene scene;
+        try {
+            scene = new Scene(fxmlLoader.load(), 700, 450);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ctrlStage.setScene(scene);
+    }
     @FXML
     void allArtists(ActionEvent event) {
         allArtistsSideBar(ctrlStage);

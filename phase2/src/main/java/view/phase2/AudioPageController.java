@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -13,11 +14,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Audio;
 import model.Database;
 import model.Music;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
@@ -82,7 +85,14 @@ public class AudioPageController implements Initializable {
 
     @FXML
     void back(ActionEvent event) {
-        SearchController.backMethodLogged(ctrlStage);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AllAudiosPage.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(), 700, 450);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ctrlStage.setScene(scene);
         mediaPlayer.pause();
     }
 
@@ -146,6 +156,7 @@ public class AudioPageController implements Initializable {
             Image liked = new Image(path);
             likeBtn.setImage(liked);
             AllAudiosPageController.chosenAudio.numOfLikes++;
+            ListenerController.getListenerController().getListener().getLikedAudios().add(AllAudiosPageController.chosenAudio);
             ListenerController.getListenerController().getListener().getGenresSuggestion().add(AllAudiosPageController.chosenAudio.getAudioGenre());
             isLiked = true;
         } else if (isLiked) {
@@ -153,6 +164,7 @@ public class AudioPageController implements Initializable {
             Image notLiked = new Image(path);
             likeBtn.setImage(notLiked);
             AllAudiosPageController.chosenAudio.numOfLikes--;
+            ListenerController.getListenerController().getListener().getLikedAudios().remove(AllAudiosPageController.chosenAudio);
             isLiked = false;
         }
     }
@@ -179,6 +191,19 @@ public class AudioPageController implements Initializable {
         playPauseBtn.setImage(playImage);
         music = new Media(AllAudiosPageController.chosenAudio.getAudioLink());
         mediaPlayer = new MediaPlayer(music);
+        for (Audio likedAudios : ListenerController.getListenerController().getListener().getLikedAudios()) {
+            if (AllAudiosPageController.chosenAudio.equals(likedAudios)) {
+                String path2 = Paths.get("src/main/resources/view/phase2/Images/liked.png").toAbsolutePath().toString();
+                Image liked = new Image(path2);
+                likeBtn.setImage(liked);
+                break;
+            } else {
+                String path3 = Paths.get("src/main/resources/view/phase2/Images/like.png").toAbsolutePath().toString();
+                Image notLiked = new Image(path3);
+                likeBtn.setImage(notLiked);
+                break;
+            }
+        }
         playPauseBtn.setOnMouseClicked(e -> {
             if (!isPlaying) {
                 playPauseBtn.setImage(pauseImage);
@@ -197,14 +222,28 @@ public class AudioPageController implements Initializable {
             if (musicCounter == Database.getDatabase().getAllAudios().size() - 1) {
                 musicCounter = 0;
             } else musicCounter++;
-            mediaPlayer = new MediaPlayer(new Media(Database.getDatabase().getAllAudios().get(musicCounter).getAudioLink()));
-            String coverPath1 = Paths.get(Database.getDatabase().getAllAudios().get(musicCounter).getCover()).toAbsolutePath().toString();
+            AllAudiosPageController.chosenAudio = Database.getDatabase().getAllAudios().get(musicCounter);
+            mediaPlayer = new MediaPlayer(new Media(AllAudiosPageController.chosenAudio.getAudioLink()));
+            String coverPath1 = Paths.get(AllAudiosPageController.chosenAudio.getCover()).toAbsolutePath().toString();
             Image cover1 = new Image(coverPath1);
             coverImageView.setImage(cover1);
-            artistNameText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getArtistName());
-            audioTitleText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getAudioTitle());
-            lyrics.setText(((Music) Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
+            artistNameText.setText(AllAudiosPageController.chosenAudio.getArtistName());
+            audioTitleText.setText(AllAudiosPageController.chosenAudio.getAudioTitle());
+            lyrics.setText(((Music) AllAudiosPageController.chosenAudio).getLyrics());
             mediaPlayer.play();
+            for (Audio likedAudios : ListenerController.getListenerController().getListener().getLikedAudios()) {
+                if (AllAudiosPageController.chosenAudio.equals(likedAudios)) {
+                    String path2 = Paths.get("src/main/resources/view/phase2/Images/liked.png").toAbsolutePath().toString();
+                    Image liked = new Image(path2);
+                    likeBtn.setImage(liked);
+                    break;
+                } else {
+                    String path3 = Paths.get("src/main/resources/view/phase2/Images/like.png").toAbsolutePath().toString();
+                    Image notLiked = new Image(path3);
+                    likeBtn.setImage(notLiked);
+                    break;
+                }
+            }
             isPlaying = true;
             playPauseBtn.setImage(pauseImage);
         });
@@ -215,14 +254,28 @@ public class AudioPageController implements Initializable {
             if (musicCounter == 0) {
                 musicCounter = Database.getDatabase().getAllAudios().size() - 1;
             } else musicCounter--;
-            mediaPlayer = new MediaPlayer(new Media(Database.getDatabase().getAllAudios().get(musicCounter).getAudioLink()));
-            String coverPath1 = Paths.get(Database.getDatabase().getAllAudios().get(musicCounter).getCover()).toAbsolutePath().toString();
+            AllAudiosPageController.chosenAudio = Database.getDatabase().getAllAudios().get(musicCounter);
+            mediaPlayer = new MediaPlayer(new Media(AllAudiosPageController.chosenAudio.getAudioLink()));
+            String coverPath1 = Paths.get(AllAudiosPageController.chosenAudio.getCover()).toAbsolutePath().toString();
             Image cover1 = new Image(coverPath1);
             coverImageView.setImage(cover1);
-            artistNameText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getArtistName());
-            audioTitleText.setText(Database.getDatabase().getAllAudios().get(musicCounter).getAudioTitle());
-            lyrics.setText(((Music) Database.getDatabase().getAllAudios().get(musicCounter)).getLyrics());
+            artistNameText.setText(AllAudiosPageController.chosenAudio.getArtistName());
+            audioTitleText.setText(AllAudiosPageController.chosenAudio.getAudioTitle());
+            lyrics.setText(((Music) AllAudiosPageController.chosenAudio).getLyrics());
             mediaPlayer.play();
+            for (Audio likedAudios : ListenerController.getListenerController().getListener().getLikedAudios()) {
+                if (AllAudiosPageController.chosenAudio.equals(likedAudios)) {
+                    String path2 = Paths.get("src/main/resources/view/phase2/Images/liked.png").toAbsolutePath().toString();
+                    Image liked = new Image(path2);
+                    likeBtn.setImage(liked);
+                    break;
+                } else {
+                    String path3 = Paths.get("src/main/resources/view/phase2/Images/like.png").toAbsolutePath().toString();
+                    Image notLiked = new Image(path3);
+                    likeBtn.setImage(notLiked);
+                    break;
+                }
+            }
             isPlaying = true;
             playPauseBtn.setImage(pauseImage);
         });

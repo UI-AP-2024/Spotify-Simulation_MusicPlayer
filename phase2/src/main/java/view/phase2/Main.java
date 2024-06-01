@@ -31,7 +31,7 @@ public class Main extends Application {
         s1.createNewAlbum("Wiped Out!");
         s1.publishNewSong("The Beach", Genre.POP, "I'm sick, and I'm tired too\n" + "I can admit, I am not fireproof\n" + "I feel it " +
                 "burning me\n" + "I feel it burning you\n" + "I hope I don't murder me\n" + "I hope I don't burden you\n" + "If I do, If I do", "https://ts15.tarafdari.com/contents/user847852/content-sound/the_beach_-_the_neighbourhood.mp3", "src/main/resources/view/phase2/Images/nbhd1.png", 1);
-        s1.publishNewSong("Sweater Weather", Genre.POP, "And all I am is a man\n" + "I want the world in my hands\n" + "I hate the beach\n" +
+        s1.publishNewSong("Sweater Weather", Genre.HISTORY, "And all I am is a man\n" + "I want the world in my hands\n" + "I hate the beach\n" +
                 "But I stand in California with my toes in the sand\n" + "Use the sleeves of my sweater\n" + "Let's have an adventure\n" + "Head in the clouds but my gravity centered", "https://dl.musicdel.ir/Music/1400/09/the_neighbourhood_sweater_weather%20128.mp3", "src/main/resources/view/phase2/Images/nbhd2.png", 1);
         //
         Singer katatonia = new Singer("katatonia", "kataPass", "Katatonia", "katatoniaaa@gmail.com", "09001234567", LocalDate.of(2005, 7, 10), "Swedish heavy metal band");
@@ -111,6 +111,7 @@ public class Main extends Application {
         PremiumPageController.ctrlStage = stage;
         playlistsPageController.ctrlStage = stage;
         CreditPageController.ctrlStage = stage;
+        dwPageController.ctrlStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("homePageNotLoggedIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         FXMLLoader fxmlLoader1 = new FXMLLoader(Main.class.getResource("start.fxml"));

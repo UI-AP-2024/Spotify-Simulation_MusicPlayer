@@ -11,18 +11,18 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Audio;
-import model.Playlist;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
 
-public class playlistsPageController implements Initializable {
+public class dwPageController implements Initializable {
     public static Stage ctrlStage;
 
     @FXML
@@ -47,19 +47,10 @@ public class playlistsPageController implements Initializable {
     private Button logoutBtn;
 
     @FXML
-    private Text playlistName;
-
-    @FXML
     private AnchorPane sideBar;
 
     @FXML
     private ListView<Audio> tracksList;
-    @FXML
-    void back(ActionEvent event) {
-        SearchController.backMethodLogged(ctrlStage);
-    }
-
-
     @FXML
     void allArtistsAct(MouseEvent event) {
         HomePageLoggedInController.allArtistsSideBar(ctrlStage);
@@ -88,17 +79,24 @@ public class playlistsPageController implements Initializable {
         AllArtistsPagesController.loadHomeLogged(ctrlStage);
     }
 
+    @FXML
+    void back(ActionEvent event) {
+        SearchController.backMethodLogged(ctrlStage);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        playlistName.setText(ListenerPageController.chosenPlaylist.getPlaylistName());
-        tracksList.getItems().addAll(ListenerPageController.chosenPlaylist.getPlaylistAudios());
+        List<Audio> shuffledList = ListenerController.getListenerController().suggestAudios();
+        Collections.shuffle(shuffledList);
+        for (int i = 0; i < 3; i++) {
+            tracksList.getItems().add(shuffledList.get(i));
+        }
         tracksList.getSelectionModel().selectedItemProperty().addListener((p, o, n) -> {
             if (n != null) {
-                for (Audio audio : ListenerPageController.chosenPlaylist.getPlaylistAudios()) {
+                for (Audio audio : shuffledList) {
                     if (audio.equals(n)) {
                         PlayPageController.chosenAudio = audio;
-                        PlayPageController.audioList = ListenerPageController.chosenPlaylist.getPlaylistAudios();
+                        PlayPageController.audioList = shuffledList;
                         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("PlayPage.fxml"));
                         Scene scene = null;
                         try {

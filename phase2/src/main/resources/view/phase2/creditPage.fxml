@@ -19,7 +19,7 @@
             <Font name="SansSerif Bold" size="21.0" />
          </font>
       </Button>
-      <TextField fx:id="cardText" layoutX="120.0" layoutY="142.0" prefHeight="44.0" prefWidth="306.0" promptText="Card Number" style="-fx-background-color: gray;">
+      <TextField fx:id="pinText" layoutX="120.0" layoutY="142.0" prefHeight="44.0" prefWidth="306.0" promptText="PIN" style="-fx-background-color: gray;">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -42,6 +42,16 @@
       <Button fx:id="payBtn" layoutX="420.0" layoutY="336.0" mnemonicParsing="false" onAction="#payAct" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: #1BD760; -fx-background-radius: 20;" text="Pay">
          <font>
             <Font name="SansSerif Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="cardText" layoutX="120.0" layoutY="92.0" prefHeight="44.0" prefWidth="306.0" promptText="Card Number" style="-fx-background-color: gray;">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="pinBtn" layoutX="444.0" layoutY="153.0" mnemonicParsing="false" onAction="#pinAct" prefWidth="70.0" style="-fx-background-radius: 15; -fx-background-color: #93B3C3;" text="6-digit PIN">
+         <font>
+            <Font name="SansSerif Bold" size="11.0" />
          </font>
       </Button>
    </children>
