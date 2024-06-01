@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="40th commit.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b7c0867d-073a-4560-a469-0423f5f40c6f" name="Changes" comment="last commit." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +82,7 @@
       <workItem from="1717064430446" duration="12224000" />
       <workItem from="1717094752230" duration="4519000" />
       <workItem from="1717147806085" duration="8848000" />
-      <workItem from="1717219268057" duration="11010000" />
+      <workItem from="1717219268057" duration="11082000" />
     </task>
     <task id="LOCAL-00001" summary="change project file">
       <created>1716041205744</created>
@@ -226,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717229041792</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="last commit.">
+      <created>1717237948620</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717237948620</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +269,7 @@
     <MESSAGE value="38th commit." />
     <MESSAGE value="39th commit." />
     <MESSAGE value="40th commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="40th commit." />
+    <MESSAGE value="last commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit." />
   </component>
 </project>
